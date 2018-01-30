@@ -51,6 +51,7 @@
     }
 .execAction { padding: 5px 8px; }
 .err { padding: 5px 0px; }
+    #actions-extras {display: block;}
 #actions-extras input {
   width: 35px;
   padding: 5px 8px 7px;
@@ -58,12 +59,19 @@
 
 #insert-input input, #remove-input input { width: 100px; }
 
-.create { bottom: 200px; }
-.search { bottom: 173px; }
-.insert { bottom: 146px; }
-.remove { bottom: 119px; }
-.predsucc { bottom: 92px; }
-.inorder { bottom: 65px; }
+.create { bottom: 200px;background: #00bfff; }
+.search { bottom: 173px;background: #00bfff; }
+.insert { bottom: 146px;background: #00bfff; }
+.remove { bottom: 119px;background: #00bfff; }
+    #status {background:#00bfff;}
+    #status-hide {background:#00bfff; }
+    #codetrace-hide {background: #00EE76;}
+    #codetrace {background: #00EE76;}
+    #actions {background: #008B00;}
+    #left-bar {background: #FA8072; width: 120px; z-index: -1;}
+    #mode-menu {background: #9BCD9B; height: 40px; z-index: 0;}
+    #bottom-bar {background: #9BCD9B; z-index: 0;}
+    body {background: #FFF68F;}
 </style>
     
 </head>
@@ -71,68 +79,67 @@
     
 <body>
 
-<div id="dark-overlay"></div>
-<div id="status" class="panel"><p></p></div>
-<div id="status-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">" title="show/hide status panel" /></div>
-<div id="codetrace" class="panel">
-<p id="code1" style="padding-top: 10px;"></p>
-<p id="code2"></p>
-<p id="code3"></p>
-<p id="code4"></p>
-<p id="code5"></p>
-<p id="code6"></p>
-<p id="code7" style="padding-bottom: 10px;"></p>
-</div>
-<div id="codetrace-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">" title="show/hide codetrace panel" /></div>
-<!--
-<div id="left-bar"></div>
-<div id="right-bar"></div>
--->
+<!--<div id="dark-overlay"></div>-->
+<div id="mode-menu"></div>
     
-
-<div id='viz'></div>
-<div id='current-action' class='panel'></div>
-<div id='e-lecture' class='panel'></div>
-<div id="overlay" hidden></div>
-<div id="dropdown-temp-holder" hidden></div>
+    <div id="status" class="panel"><p></p></div>
+    <div id="status-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">" title="show/hide status panel" /></div>
+    <div id="codetrace" class="panel">
+    <p id="code1" style="padding-top: 10px;"></p>
+    <p id="code2"></p>
+    <p id="code3"></p>
+    <p id="code4"></p>
+    <p id="code5"></p>
+    <p id="code6"></p>
+    <p id="code7" style="padding-bottom: 10px;"></p>
+    </div>
+    <div id="codetrace-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">" title="show/hide codetrace panel" /></div>
+    <div id="left-bar"></div>
+    <!--<div id="right-bar"></div>-->
 
 
+    <div id='viz'></div>
+
+    <div id="actions" class="panel">
+    <p id="create">Create</p>
+    <p id="search">Search(v)</p>
+    <p id="insert">Insert(v)</p>
+    <p id="remove">Remove(v)</p>
+    </div>
+<!--    <div id="actions-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">" title="show/hide actions panel" /></div>-->
+    <div id="actions-extras">
+
+
+    <div class="create action-menu-pullout">
+    <div id="create-example2" class="execAction new-menu-option coloured-menu-option" onClick="example(2)"><p>Random</p></div>
+    <div id="create-err" class="err"></div>
+    </div>
+
+
+    <div class="search action-menu-pullout">
+    <div id="search-input" class="new-menu-option">v = <input type="number" id="v-search" title="Enter an Integer" autocomplete="off" min=0 max=99 value=7></div>
+    <div id="search-go" class="execAction coloured-menu-option" onclick="searchVertex()"><p>Go</p></div>
+    <div id="search-err" class="err"></div>
+    </div>
+
+
+    <div class="insert action-menu-pullout">
+    <div id="insert-input" class="new-menu-option">v = <input type="text" id="v-insert" title="Enter an Integer or comma-separated array of Integers" autocomplete="off" value="1,77"></div>
+    <div id="insert-go" class="execAction coloured-menu-option" onclick="insertVertex()"><p>Go</p></div>
+    <div id="insert-err" class="err"></div>
+    </div>
+
+    <div class="remove action-menu-pullout">
+    <div id="remove-input" class="new-menu-option">v = <input type="text" id="v-remove" title="Enter an Integer or comma-separated array of Integers" autocomplete="off" value="1,77"></div>
+    <div id="remove-go" class="execAction coloured-menu-option" onclick="removeVertex()"><p>Go</p></div>
+    <div id="remove-err" class="err"></div>
+    </div>
+        
+    </div>
     
-<div id="actions" class="panel">
-<p id="create">Create</p>
-<p id="search">Search(v)</p>
-<p id="insert">Insert(v)</p>
-<p id="remove">Remove(v)</p>
-</div>
-<!--<div id="actions-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">" title="show/hide actions panel" /></div>-->
-<!--<div id="actions-extras">-->
     
     
-<div class="create action-menu-pullout">
-<div id="create-example2" class="execAction new-menu-option coloured-menu-option" onClick="example(2)"><p>Random</p></div>
-<div id="create-err" class="err"></div>
-</div>
-    
-    
-<div class="search action-menu-pullout">
-<div id="search-input" class="new-menu-option">v = <input type="number" id="v-search" title="Enter an Integer" autocomplete="off" min=0 max=99 value=7></div>
-<div id="search-go" class="execAction coloured-menu-option" onclick="searchVertex()"><p>Go</p></div>
-<div id="search-err" class="err"></div>
-</div>
-    
-    
-<div class="insert action-menu-pullout">
-<div id="insert-input" class="new-menu-option">v = <input type="text" id="v-insert" title="Enter an Integer or comma-separated array of Integers" autocomplete="off" value="1,77"></div>
-<div id="insert-go" class="execAction coloured-menu-option" onclick="insertVertex()"><p>Go</p></div>
-<div id="insert-err" class="err"></div>
-</div>
-    
-<div class="remove action-menu-pullout">
-<div id="remove-input" class="new-menu-option">v = <input type="text" id="v-remove" title="Enter an Integer or comma-separated array of Integers" autocomplete="off" value="1,77"></div>
-<div id="remove-go" class="execAction coloured-menu-option" onclick="removeVertex()"><p>Go</p></div>
-<div id="remove-err" class="err"></div>
-</div>
-   
+<div id="bottom-bar"></div>  
 
 <script src="../../code.jquery.com/jquery-3.1.1.min.js"></script>
     
@@ -173,6 +180,8 @@ function customAlert(msg) {
   });
 }
 
+    
+    
 function showLoadingScreen() {
   $('#loading-overlay').show();
   $('#loading-message').show();
@@ -280,20 +289,7 @@ $(function() {
   });
 });
 
-function verifyLogout() {
-  // Steven's remarks: use a better 'confirm' than the default :(
-  var doesLogout = confirm('Are you sure to logout?');
-  if (doesLogout == true) {
-    window.location = "https://visualgo.net/logout";
-  }
-}
 
-function checkLogin() {
-  $.get('/checklogin', function(data) {
-    var url = data['url'];
-    window.location.href = '/' + url;
-  });
-}
 </script>
 <!--    Done control menu-->
     
@@ -304,7 +300,7 @@ function checkLogin() {
 <script type="text/javascript" src="../js/viz-1.0.3.js"></script>
 <script type="text/javascript" src="../js/graph_library.js"></script>
     
-
+<!-- implement -->
 <script> // Implement these functions in each visualisation
   // This function will be called before entering e-Lecture Mode
   function ENTER_LECTURE_MODE() {}
@@ -314,10 +310,7 @@ function checkLogin() {
 
   // Lecture action functions
   function CUSTOM_ACTION(action, data, mode) {}
-</script>    
-    
-    
-    
+</script>       
     
     
 <script type="text/javascript">
