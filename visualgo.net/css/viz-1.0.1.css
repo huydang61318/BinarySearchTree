@@ -12,6 +12,8 @@ html{overflow-y:auto;}
     left: 0;
 }
 
+
+
 #mode-button{
     cursor:pointer;
     padding:10px 15px;}
@@ -38,9 +40,9 @@ html{overflow-y:auto;}
     top:40px;
     left:0px;
     height:100%;
-    width:40px;
-    background:black;
-    z-index:-1;}
+    width:140px;
+    background:blue;
+    z-index:-2;}
 
 #right-bar{
     position:fixed;
@@ -82,7 +84,12 @@ html{overflow-y:auto;}
 
 #speed-control .ui-slider-handle{position:absolute;margin-left:-5px;border:none;outline:none;background-color:white;height:6px;width:10px;}
 
-#media-controls{}.media-control-button{cursor:pointer;position:fixed;opacity:0.75;}.media-control-button:hover{opacity:1.0;}.media-control-button img{display:inline-block;}#go-to-end{bottom:10px;left:50%;margin-left:-175px;}#next{bottom:10px;left:50%;margin-left:-207px;}
+#media-controls{z-index: 1001;}
+.media-control-button{cursor:pointer;position:fixed;opacity:0.75;}
+.media-control-button:hover{opacity:1.0;}
+.media-control-button img{display:inline-block;}
+#go-to-end{bottom:10px;left:50%;margin-left:-175px;}
+#next{bottom:10px;left:50%;margin-left:-207px;}
 
 #pause,#play{bottom:8px;left:50%;margin-left:-243px;opacity:1.0;}
 
@@ -115,7 +122,7 @@ html{overflow-y:auto;}
 
 #current-action{bottom:320px;right:60px;width:400px;display:block;background:none;overflow:normal;white-space:normal;text-align:right;color:black;font-weight:bold;font-size:20px;}
 
-#actions{bottom:118px;left:43px;}
+#actions{bottom:115px;left:43px;}
 
 #actions p{padding:5px 10px;cursor:pointer;}
 
