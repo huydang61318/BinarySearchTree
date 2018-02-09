@@ -85,10 +85,10 @@ html{overflow-y:auto;}
 #speed-control .ui-slider-handle{position:absolute;margin-left:-5px;border:none;outline:none;background-color:white;height:6px;width:10px;}
 
 #media-controls{z-index: 1001;}
-.media-control-button{cursor:pointer;position:fixed;opacity:0.75;}
+.media-control-button{cursor:pointer;opacity:0.75;}
 .media-control-button:hover{opacity:1.0;}
 .media-control-button img{display:inline-block;}
-#go-to-end{bottom:10px;left:50%;margin-left:-175px;}
+#go-to-end{left:50%;margin-left:-175px;color: black}
 #next{bottom:10px;left:50%;margin-left:-207px;}
 
 #pause,#play{bottom:8px;left:50%;margin-left:-243px;opacity:1.0;}
@@ -120,9 +120,9 @@ html{overflow-y:auto;}
 
 .panel-hide{position:fixed;cursor:pointer;background:#777;}
 
-#current-action{bottom:320px;right:60px;width:400px;display:block;background:none;overflow:normal;white-space:normal;text-align:right;color:black;font-weight:bold;font-size:20px;}
+#current-action{top:70px;right:60px;width:100px;display:block;background:none;overflow:normal;white-space:normal;text-align:right;color:black;font-weight:bold;font-size:20px;}
 
-#actions{bottom:115px;left:43px;}
+#actions{top:70px;left:43px;}
 
 #actions p{padding:5px 10px;cursor:pointer;}
 
@@ -134,9 +134,9 @@ html{overflow-y:auto;}
 
 #actions p:last-of-type{padding-bottom:10px;}
 
-#actions-hide{bottom:60px;left:0px;padding-left:14px;padding-right:15px;}
+#actions-hide{top:70px;left:0px;padding-left:14px;padding-right:15px;}
 
-.action-menu-pullout{display: none; position: absolute; left: 193px; width: auto;}
+.action-menu-pullout{display: none; position: absolute; left: 100px;}
 
 .action-menu-pullout input{ background:black;color:white;}
 
