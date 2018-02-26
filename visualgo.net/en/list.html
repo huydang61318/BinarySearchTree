@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../css/drawgraph.css">
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
     <style>
         #actions {
@@ -98,6 +100,14 @@
         . inputinline {
             display: inline;
         }
+
+        .gridMenu a {
+            cursor: pointer;
+        }
+
+        .gridTimeline {
+            cursor: pointer;
+        }
     </style>
 
 
@@ -127,7 +137,6 @@
         <div id='current-action' style="width: auto;"></div>
     </div>
     <div class="gridTimeline" style="background-color: white; text-align: center">
-
 
         <i class="material-icons" id="go-to-beginning" onclick="goToBeginning()">first_page</i>
         <i class="material-icons" id="previous" onclick="stepBackward()">skip_previous</i>
