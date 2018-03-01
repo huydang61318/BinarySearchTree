@@ -1,0 +1,182 @@
+@charset "utf-8";
+html {
+    overflow-y: auto;
+}
+
+#viz {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/*.panel {*/
+    /*position: fixed;*/
+    /*color: white;*/
+    /*width: 0px;*/
+    /*overflow: hidden;*/
+    /*background: #777;*/
+    /*white-space: nowrap;*/
+/*}*/
+
+.panel-hide {
+    position: fixed;
+    cursor: pointer;
+    background: #777;
+}
+
+/*#status {*/
+    /*bottom: 255px;*/
+    /*right: 43px;*/
+    /*height: 54px;*/
+    /*white-space: normal;*/
+/*}*/
+
+#status p {
+    padding: 10px;
+}
+
+#status-hide {
+    bottom: 255px;
+    right: 0px;
+    padding: 19px 14px 19px 15px;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+
+/*#codetrace {*/
+    /*bottom: 60px;*/
+    /*right: 43px;*/
+    /*height: 200px;*/
+    /*font-family: "Courier New", Courier, monospace;*/
+/*}*/
+
+#codetrace p {
+    padding: 5px 10px;
+}
+
+#codetrace p.highlighted {
+    background: black;
+}
+
+#codetrace-hide {
+    bottom: 60px;
+    right: 0px;
+    padding: 88px 14px 88px 15px;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.execAction {
+    cursor: pointer;
+}
+
+.execAction p:hover {
+    background: black;
+    color: white;
+}
+
+.menu-highlighted {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.panel {
+    position: fixed;
+    color: white;
+    width: 0px;
+    overflow: hidden;
+    background: #777;
+    white-space: nowrap;
+}
+
+.panel-hide {
+    position: fixed;
+    cursor: pointer;
+    background: #777;
+}
+
+#current-action {
+    top: 30px;
+    right: 60px;
+    width: 100px;
+    display: block;
+    background: none;
+    overflow: normal;
+    white-space: normal;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#actions {
+    top: 30px;
+    left: 43px;
+}
+
+#actions p {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#actions {
+    color: white;
+}
+
+#actions p:hover {
+    background: black;
+    color: white;
+}
+
+#actions p:first-of-type {
+    padding-top: 10px;
+}
+
+#actions p:last-of-type {
+    padding-bottom: 10px;
+}
+
+#actions-hide {
+    top: 30px;
+    left: 0px;
+    padding-left: 14px;
+    padding-right: 15px;
+}
+
+.action-menu-pullout {
+    display: none;
+    position: absolute;
+    left: 320px;
+}
+
+.action-menu-pullout input {
+    background: black;
+    color: white;

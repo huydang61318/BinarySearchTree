@@ -7,38 +7,37 @@
 
     <link rel="stylesheet" type="text/css" href="../fonts/silkscreen/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
-    <link rel="stylesheet" href="../css/viz-1.0.1.css">
+    <link rel="stylesheet" href="../css/viz.css">
     <link rel="stylesheet" href="../css/visual.css">
     <link rel="stylesheet" href="../css/drawgraph.css">
-    <link rel="stylesheet" href="../css/grid.css">
-    <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/index_new.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     <style>
         #actions {
             color: black;
-            position: fixed;
-            top: 570px;
-            left: 5px;
+            /*position: fixed;*/
+            /*top: 570px;*/
+            /*left: 5px;*/
         }
 
-        .execAction {
-            padding: 5px 8px;
-            height: auto;
-        }
+        /*.execAction {*/
+            /*padding: 5px 8px;*/
+            /*height: auto;*/
+        /*}*/
 
-        .err {
-            padding: 5px 0px;
-        }
+        /*.err {*/
+            /*padding: 5px 0px;*/
+        /*}*/
 
-        .execActionA {
-            width: 50px;
-        }
+        /*.execActionA {*/
+            /*width: 50px;*/
+        /*}*/
 
-        #actions-extras {
-
-        }
+        /*#actions-extras {*/
+            /*bottom: 30px;*/
+        /*}*/
 
         #actions-extras input {
             width: 35px;
@@ -115,197 +114,464 @@
 <body>
 
 
-<div class="container">
-    <div class="gridHeader">
-        <div>HOME</div>
-        <div id="title" style="font-size: 20px; text-align: center"></div>
-    </div>
-    <div class="gridMenu">
-        <a id='title-LL' class='selected-viz'>LINKED LIST</a>
-        <a id='title-DLL'>DOUBLY LINKED LIST</a>
-        <a id='title-Stack'>Stack</a>
-        <a id='title-Queue'>Queue</a>
-        <a id='title-Deque'>Deque</a>
-    </div>
-    <div class="gridGraph" style="background-color: white">
-        <div id='viz' style="margin: 10px"></div>
-    </div>
-    <div class="gridNote">
+<nav class="main-menu">
+    <ul>F
+        <li>
+            <a href="home.html">
+                <i class="fa fa-2x fa-home"></i>
+                <span class="nav-text">
+                    HOME
+                </span>
+            </a>
+        </li>
+        <li class="has-subnav">
+            <a id="title-LL">
+                <h1 class="fa">LL</h1>
+                <span class="nav-text">
+                    LINKED LIST
+                </span>
+            </a>
+        </li>
+        <li class="has-subnav">
+            <a id="title-DLL">
+                <h1 class="fa">DLL</h1>
+                <span class="nav-text">
+                    DOUBLY LINKED LIST
+                </span>
+            </a>
+        </li>
+        <li class="has-subnav">
+            <a id="title-Stack">
+                <h1 class="fa">ST</h1>
+                <span class="nav-text">
+                    STACK
+                </span>
+            </a>
+        </li>
+        <li class="has-subnav">
+            <a id="title-Queue">
+                <h1 class="fa">QU</h1>
+                <span class="nav-text">
+                   QUEUE
+                </span>
+            </a>
+        </li>
+        <li class="has-subnav">
+            <a id="title-Deque">
+                <h1 class="fa">DE</h1>
+                <span class="nav-text">
+                    DEQUE
+                </span>
+            </a>
+        </li>
 
-    </div>
-    <div class="gridDisplay">
-        <div id='current-action' style="width: auto;"></div>
-    </div>
-    <div class="gridTimeline" style="background-color: white; text-align: center">
-
-        <i class="material-icons" id="go-to-beginning" onclick="goToBeginning()">first_page</i>
-        <i class="material-icons" id="previous" onclick="stepBackward()">skip_previous</i>
-        <i class="material-icons" id="pause" onclick="pause()">pause</i>
-        <i class="material-icons" id="play" onclick="play()">play_arrow</i>
-        <i class="material-icons" id="next" onclick="stepForward()">skip_next</i>
-        <i class="material-icons" id="go-to-end" onclick="goToEnd()">last_page</i>
-
-    </div>
-    <div class="gridAction" style="background-color: white">
-        <div id="status"><p></p></div>
+    </ul>
+</nav>
+<div class="area">
+    <div class="container">
+        <div class="gridHeader">
+            <div id="title" style="font-size: 20px; color: white"></div>
+        </div>
+        <div class="gridGraph" style="background-color: white ; text-align: center; line-height: inherit">
+            <svg id="viz" style="margin: 10px;"></svg>
 
 
-    </div>
-    <div class="gridLog" style="margin: auto; background-color: white">
-        <div id="console" class="del" style="width: 600px; height: 200px;"><p style="font-size: 15px"></p></div>
-    </div>
-
-    <div class="gridPseudo" style="background-color: white">
-        <div id="codetrace">
-            <p id="code1" style="padding-top: 10px;"></p>
-            <p id="code2"></p>
-            <p id="code3"></p>
-            <p id="code4"></p>
-            <p id="code5"></p>
-            <p id="code6"></p>
-            <p id="code7" style="padding-bottom: 10px;"></p>
         </div>
 
+        <div class="gridNote">
+            <div id="noteContent" style="text-align: justify">
+
+            </div>
+            <div id="log" class="panel"><p style="font-size: 15px"></p></div>
+        </div>
+        <div class="gridTimeline" style="background-color: white; text-align: center">
+            <i class="material-icons" id="go-to-beginning" onclick="goToBeginning()">first_page</i>
+            <i class="material-icons" id="previous" onclick="stepBackward()">skip_previous</i>
+            <i class="material-icons" id="pause" onclick="pause()">pause</i>
+            <i class="material-icons" id="play" onclick="play()">play_arrow</i>
+            <i class="material-icons" id="next" onclick="stepForward()">skip_next</i>
+            <i class="material-icons" id="go-to-end" onclick="goToEnd()">last_page</i>
+        </div>
+        <div class="gridControl" style="background-color: white">
+            <div id="actions">
+                <p id="create" class="execActionA">Create</p>
+                <p id="search" class="execAction execActionA" onClick="searchGeneric()">Search(v)</p>
+                <p id="insert" class="execActionA">Insert(i,v)</p>
+                <p id="remove" class="execAction execActionA" onClick="removeGeneric()">Remove(i)</p>
+            </div>
+            <div id="actions-extras">
+                <div class="create action-menu-pullout">
+                    <div id="create-empty" class="execAction new-menu-option coloured-menu-option"
+                         onClick="empty(); clearConsole()"><p>Empty</p></div>
+                    <div id="create-random" class="execAction new-menu-option coloured-menu-option"
+                         onClick="random(); clearConsole()"><p>Random</p></div>
+                    <div id="create-random-sorted" class="execAction new-menu-option coloured-menu-option"
+                         onClick="randomSorted(); clearConsole()"><p>Random Sorted</p></div>
+                    <div id="create-random-fixed-size" class="execAction new-menu-option coloured-menu-option"
+                         onclick="createModelingOpen('createfixedsize'); clearConsole()"><p>Random Fixed Size</p>
+                        <div id="createfixedsize-input" class="new-menu-option inputline">
+                            <input type="number" id="v-create-size" class="inputinline"
+                                   title="Enter the size of the linked list" autocomplete="off" min=1 max=10 value=7 style="width: 85%">
+                            <div id="createfixedsize-go" class="execAction coloured-menu-option inputinline"
+                                 onClick="randomFixedSize(); clearConsole()"
+                                 title="Create random fixed size linked list"><p>
+                                Go</p></div>
+                        </div>
+                    </div>
+                    <div id="create-from-arr" class="execAction new-menu-option coloured-menu-option"
+                         onclick="createModelingOpen('createuserdefined')"><p>--- User Defined List ---</p>
+                        <div id="createuserdefined-input" class="new-menu-option">
+                            <input type="text" id="v-create-arr" title="Enter the elements separated by comma"
+                                   autocomplete="off" value="1,2,3" style="width: 85%">
+                            <div id="createuserdefined-go" class="execAction coloured-menu-option" onClick="nonRandom()"
+                                 title="Create random fixed size linked list"><p>Go</p></div>
+                        </div>
+                    </div>
+                    <div id="create-err" class="err"></div>
+                </div>
+                <div class="search action-menu-pullout">
+
+                    <div id="search-peek-front" style="display: none;"
+                         class="execAction new-menu-option coloured-menu-option"
+                         onclick="peekDeque('front'); clearConsole()"><p>Front</p></div>
+                    <div id="search-peek-back" style="display: none;"
+                         class="execAction new-menu-option coloured-menu-option"
+                         onclick="peekDeque('back'); clearConsole()"><p>Back</p></div>
+
+                    <div id="search-input" class="new-menu-option">v = <input type="number" id="v-search"
+                                                                              title="Enter an Integer"
+                                                                              autocomplete="off" min=0
+                                                                              max=99 value=5 style="display: inline; width: 100%">
+                    </div>
+                    <div id="search-go" class="execAction coloured-menu-option" onclick="searchVertex(); clearConsole()"
+                         style=" background: gray;"><p>Go</p></div>
+                    <div id="search-err" class="err"></div>
+                </div>
+                <div class="insert action-menu-pullout">
+
+
+                    <div id="pushtop-input" style="display: none;" class="new-menu-option">v = <input type="number"
+                                                                                                      id="v-push-top-value"
+                                                                                                      title="Enter an Integer"
+                                                                                                      autocomplete="off"
+                                                                                                      min=0
+                                                                                                      max=99 value=53 style="width: 85%";">
+                    </div>
+                    <div id="pushtop-go" style="display: none;" class="execAction coloured-menu-option"
+                         onclick="pushTop(); clearConsole()"><p>Go</p></div>
+
+                    <div id="enqueueback-input" style="display: none;" class="new-menu-option">v = <input type="number"
+                                                                                                          id="v-enqueue-back-value"
+                                                                                                          title="Enter an Integer"
+                                                                                                          autocomplete="off"
+                                                                                                          min=0 max=99
+                                                                                                          value=57 style="width: 85%"; >
+                    </div>
+                    <div id="enqueueback-go" style="display: none;" class="execAction coloured-menu-option"
+                         onclick="enqueueBack(); clearConsole()"><p>Go</p></div>
+
+                    <div id="insert-deque-input" style="display: none;" class="new-menu-option">v = <input type="number"
+                                                                                                           id="v-insert-deque-value"
+                                                                                                           title="Enter an Integer"
+                                                                                                           autocomplete="off"
+                                                                                                           min=0 max=99
+                                                                                                           value=57 style="width: 85%";>
+                    </div>
+                    <div id="insert-deque-front" style="display: none;"
+                         class="execAction new-menu-option coloured-menu-option"
+                         onclick="insertDeque('front'); clearConsole()"><p>Front</p></div>
+                    <div id="insert-deque-back" style="display: none;"
+                         class="execAction new-menu-option coloured-menu-option"
+                         onclick="insertDeque('back'); clearConsole()"><p>Back</p></div>
+
+
+                    <div id="insert-head" class="execAction new-menu-option coloured-menu-option"
+                         onclick="insertModelingOpen('inserthead'); clearConsole()"><p>i = 0 (Head), specify v =</p>
+                        <div id="inserthead-input" class="new-menu-option">
+                            <input type="number" id="v-insert-head-value" title="Enter an Integer" autocomplete="off"
+                                   min=0
+                                   max=99 value=85 style="width: 85%";>
+                            <div id="inserthead-go" class="execAction coloured-menu-option"
+                                 onClick="insertHead(); clearConsole()" title="Insert to Head"><p>Go</p></div>
+                        </div>
+                    </div>
+                    <div id="insert-tail" class="execAction new-menu-option coloured-menu-option"
+                         onclick="insertModelingOpen('inserttail'); clearConsole()"><p>i = N (After Tail), specify v
+                        =</p>
+                        <div id="inserttail-input" class="new-menu-option">
+                            <input type="number" id="v-insert-tail-value" title="Enter an Integer" autocomplete="off"
+                                   min=0
+                                   max=99 value=80 style="width: 85%";>
+                            <div id="inserttail-go" class="execAction coloured-menu-option"
+                                 onClick="insertTail(); clearConsole()" title="Insert to Tail"><p>Go</p></div>
+                        </div>
+                    </div>
+                    <div id="insert-kth" class="execAction new-menu-option coloured-menu-option"
+                         onclick="insertModelingOpen('insertkth'); clearConsole()"><p>specify both i in [1..N-1] and v
+                        =</p>
+                        <div id="insertkth-input" class="new-menu-option">
+                            <input type="number" id="v-insert-kth" title="Enter an Integer" autocomplete="off" min=1
+                                   max=9
+                                   value=2 style="width: 85%";>
+                            <input type="number" id="v-insert-kth-value" title="Enter an Integer" autocomplete="off"
+                                   min=0
+                                   max=99 value=90 style="width: 85%";>
+                            <div id="insertkth-go" class="execAction coloured-menu-option"
+                                 onClick="insertKth(); clearConsole()"
+                                 title="Insert to kth"><p>Go</p></div>
+                        </div>
+                    </div>
+                    <div id="insert-err" class="err"></div>
+                </div>
+                <div class="remove action-menu-pullout">
+
+                    <div id="remove-deque-front" style="display:none;"
+                         class="execAction new-menu-option coloured-menu-option"
+                         onclick="removeDeque('front'); clearConsole()"><p>Front</p></div>
+                    <div id="remove-deque-back" style="display:none;"
+                         class="execAction new-menu-option coloured-menu-option"
+                         onclick="removeDeque('back'); clearConsole()"><p>Back</p></div>
+
+                    <div id="remove-head" class="execAction new-menu-option coloured-menu-option"
+                         onClick="removeHead(); clearConsole()"><p>Remove i = 0 (Head)</p></div>
+                    <div id="remove-tail" class="execAction new-menu-option coloured-menu-option"
+                         onClick="removeTail(); clearConsole()"><p>Remove i = N-1 (Tail)</p></div>
+                    <div id="remove-kth" class="execAction new-menu-option coloured-menu-option"
+                         onclick="removeModelingOpen('removekth'); clearConsole()"><p>specify i in [1..N-2]</p>
+                        <div id="removekth-input" class="new-menu-option">
+                            <input type="number" id="v-remove-kth" title="Enter an Integer" autocomplete="off" min=1
+                                   max=8
+                                   value=2 style="width: 85%">
+                            <div id="removekth-go" class="execAction coloured-menu-option"
+                                 onClick="removeKth(); clearConsole()"
+                                 title="Remove k-th"><p>Go</p></div>
+                        </div>
+                    </div>
+                    <div id="remove-err" class="err"></div>
+                </div>
+            </div>
+        </div>
+        <div class="gridAction" style="background-color: white">
+            <div id="status" class="panel"><p style="font-size: 15px"></p></div>
+        </div>
+        <div class="gridLog" style="margin: auto; background-color: white">
+            <div id="console" class="del" style="width: 600px; height: 200px;"><p style="font-size: 15px"></p></div>
+        </div>
+        <div class="gridPseudo" style="background-color: white">
+            <div id="codetrace" class="panel">
+                <p id="code1" style="padding-top: 10px;"></p>
+                <p id="code2"></p>
+                <p id="code3"></p>
+                <p id="code4"></p>
+                <p id="code5"></p>
+                <p id="code6"></p>
+                <p id="code7"></p>
+                <p id="code8"></p>
+                <p id="code9"></p>
+                <p id="code10"></p>
+                <p id="code11"></p>
+                <p id="code12" style="padding-bottom: 10px;"></p>
+            </div>
+        </div>
+
+        <div class="gridFooter" style="background-color: #212121; height: 50px; position: absolute; bottom: 0px;">
+            FOOTER
+        </div>
     </div>
-
-    <div id="actions">
-        <p id="create" class="execActionA">Create</p>
-        <p id="search" class="execAction execActionA" onClick="searchGeneric()">Search(v)</p>
-        <p id="insert" class="execActionA">Insert(i,v)</p>
-        <p id="remove" class="execAction execActionA" onClick="removeGeneric()">Remove(i)</p>
-    </div>
-    <div id="actions-extras">
-        <div class="create action-menu-pullout">
-            <div id="create-empty" class="execAction new-menu-option coloured-menu-option"
-                 onClick="empty(); clearConsole()"><p>Empty</p></div>
-            <div id="create-random" class="execAction new-menu-option coloured-menu-option"
-                 onClick="random(); clearConsole()"><p>Random</p></div>
-            <div id="create-random-sorted" class="execAction new-menu-option coloured-menu-option"
-                 onClick="randomSorted(); clearConsole()"><p>Random Sorted</p></div>
-            <div id="create-random-fixed-size" class="execAction new-menu-option coloured-menu-option"
-                 onclick="createModelingOpen('createfixedsize'); clearConsole()"><p>Random Fixed Size</p>
-                <div id="createfixedsize-input" class="new-menu-option inputline">
-                    <input type="number" id="v-create-size" class="inputinline"
-                           title="Enter the size of the linked list" autocomplete="off" min=1 max=10 value=7>
-                    <div id="createfixedsize-go" class="execAction coloured-menu-option inputinline"
-                         onClick="randomFixedSize(); clearConsole()" title="Create random fixed size linked list"><p>
-                        Go</p></div>
-                </div>
-            </div>
-            <div id="create-from-arr" class="execAction new-menu-option coloured-menu-option"
-                 onclick="createModelingOpen('createuserdefined')"><p>--- User Defined List ---</p>
-                <div id="createuserdefined-input" class="new-menu-option">
-                    <input type="text" id="v-create-arr" title="Enter the elements separated by comma"
-                           autocomplete="off" value="1,2,3">
-                    <div id="createuserdefined-go" class="execAction coloured-menu-option" onClick="nonRandom()"
-                         title="Create random fixed size linked list"><p>Go</p></div>
-                </div>
-            </div>
-            <div id="create-err" class="err"></div>
-        </div>
-        <div class="search action-menu-pullout">
-
-            <div id="search-peek-front" style="display: none;" class="execAction new-menu-option coloured-menu-option"
-                 onclick="peekDeque('front'); clearConsole()"><p>Front</p></div>
-            <div id="search-peek-back" style="display: none;" class="execAction new-menu-option coloured-menu-option"
-                 onclick="peekDeque('back'); clearConsole()"><p>Back</p></div>
-
-            <div id="search-input" class="new-menu-option">v = <input type="number" id="v-search"
-                                                                      title="Enter an Integer" autocomplete="off" min=0
-                                                                      max=99 value=5 style="display: inline;"></div>
-            <div id="search-go" class="execAction coloured-menu-option" onclick="searchVertex(); clearConsole()"
-                 style="position: fixed; top: 600px; left: 190px; background: gray;"><p>Go</p></div>
-            <div id="search-err" class="err"></div>
-        </div>
-        <div class="insert action-menu-pullout">
-
-
-            <div id="pushtop-input" style="display: none;" class="new-menu-option">v = <input type="number"
-                                                                                              id="v-push-top-value"
-                                                                                              title="Enter an Integer"
-                                                                                              autocomplete="off" min=0
-                                                                                              max=99 value=53></div>
-            <div id="pushtop-go" style="display: none;" class="execAction coloured-menu-option"
-                 onclick="pushTop(); clearConsole()"><p>Go</p></div>
-
-            <div id="enqueueback-input" style="display: none;" class="new-menu-option">v = <input type="number"
-                                                                                                  id="v-enqueue-back-value"
-                                                                                                  title="Enter an Integer"
-                                                                                                  autocomplete="off"
-                                                                                                  min=0 max=99 value=57>
-            </div>
-            <div id="enqueueback-go" style="display: none;" class="execAction coloured-menu-option"
-                 onclick="enqueueBack(); clearConsole()"><p>Go</p></div>
-
-            <div id="insert-deque-input" style="display: none;" class="new-menu-option">v = <input type="number"
-                                                                                                   id="v-insert-deque-value"
-                                                                                                   title="Enter an Integer"
-                                                                                                   autocomplete="off"
-                                                                                                   min=0 max=99
-                                                                                                   value=57></div>
-            <div id="insert-deque-front" style="display: none;" class="execAction new-menu-option coloured-menu-option"
-                 onclick="insertDeque('front'); clearConsole()"><p>Front</p></div>
-            <div id="insert-deque-back" style="display: none;" class="execAction new-menu-option coloured-menu-option"
-                 onclick="insertDeque('back'); clearConsole()"><p>Back</p></div>
-
-
-            <div id="insert-head" class="execAction new-menu-option coloured-menu-option"
-                 onclick="insertModelingOpen('inserthead'); clearConsole()"><p>i = 0 (Head), specify v =</p>
-                <div id="inserthead-input" class="new-menu-option">
-                    <input type="number" id="v-insert-head-value" title="Enter an Integer" autocomplete="off" min=0
-                           max=99 value=85>
-                    <div id="inserthead-go" class="execAction coloured-menu-option"
-                         onClick="insertHead(); clearConsole()" title="Insert to Head"><p>Go</p></div>
-                </div>
-            </div>
-            <div id="insert-tail" class="execAction new-menu-option coloured-menu-option"
-                 onclick="insertModelingOpen('inserttail'); clearConsole()"><p>i = N (After Tail), specify v =</p>
-                <div id="inserttail-input" class="new-menu-option">
-                    <input type="number" id="v-insert-tail-value" title="Enter an Integer" autocomplete="off" min=0
-                           max=99 value=80>
-                    <div id="inserttail-go" class="execAction coloured-menu-option"
-                         onClick="insertTail(); clearConsole()" title="Insert to Tail"><p>Go</p></div>
-                </div>
-            </div>
-            <div id="insert-kth" class="execAction new-menu-option coloured-menu-option"
-                 onclick="insertModelingOpen('insertkth'); clearConsole()"><p>specify both i in [1..N-1] and v =</p>
-                <div id="insertkth-input" class="new-menu-option">
-                    <input type="number" id="v-insert-kth" title="Enter an Integer" autocomplete="off" min=1 max=9
-                           value=2>
-                    <input type="number" id="v-insert-kth-value" title="Enter an Integer" autocomplete="off" min=0
-                           max=99 value=90>
-                    <div id="insertkth-go" class="execAction coloured-menu-option" onClick="insertKth(); clearConsole()"
-                         title="Insert to kth"><p>Go</p></div>
-                </div>
-            </div>
-            <div id="insert-err" class="err"></div>
-        </div>
-        <div class="remove action-menu-pullout">
-
-            <div id="remove-deque-front" style="display:none;" class="execAction new-menu-option coloured-menu-option"
-                 onclick="removeDeque('front'); clearConsole()"><p>Front</p></div>
-            <div id="remove-deque-back" style="display:none;" class="execAction new-menu-option coloured-menu-option"
-                 onclick="removeDeque('back'); clearConsole()"><p>Back</p></div>
-
-            <div id="remove-head" class="execAction new-menu-option coloured-menu-option"
-                 onClick="removeHead(); clearConsole()"><p>Remove i = 0 (Head)</p></div>
-            <div id="remove-tail" class="execAction new-menu-option coloured-menu-option"
-                 onClick="removeTail(); clearConsole()"><p>Remove i = N-1 (Tail)</p></div>
-            <div id="remove-kth" class="execAction new-menu-option coloured-menu-option"
-                 onclick="removeModelingOpen('removekth'); clearConsole()"><p>specify i in [1..N-2]</p>
-                <div id="removekth-input" class="new-menu-option">
-                    <input type="number" id="v-remove-kth" title="Enter an Integer" autocomplete="off" min=1 max=8
-                           value=2>
-                    <div id="removekth-go" class="execAction coloured-menu-option" onClick="removeKth(); clearConsole()"
-                         title="Remove k-th"><p>Go</p></div>
-                </div>
-            </div>
-            <div id="remove-err" class="err"></div>
-        </div>
-    </div>
-
-    <div class="gridFooter">FOOTER</div>
 </div>
+
+
+<!--<div class="container">-->
+<!--<div class="gridHeader">-->
+<!--<div>HOME</div>-->
+<!--<div id="title" style="font-size: 20px; text-align: center"></div>-->
+<!--</div>-->
+<!--<div class="gridMenu">-->
+<!--<a id='title-LL' class='selected-viz'>LINKED LIST</a>-->
+<!--<a id='title-DLL'>DOUBLY LINKED LIST</a>-->
+<!--<a id='title-Stack'>Stack</a>-->
+<!--<a id='title-Queue'>Queue</a>-->
+<!--<a id='title-Deque'>Deque</a>-->
+<!--</div>-->
+<!--<div class="gridGraph" style="background-color: white">-->
+<!--<div id='viz' style="margin: 10px"></div>-->
+<!--</div>-->
+<!--<div class="gridNote">-->
+
+<!--</div>-->
+<!--<div class="gridDisplay">-->
+<!--<div id='current-action' style="width: auto;"></div>-->
+<!--</div>-->
+<!--<div class="gridTimeline" style="background-color: white; text-align: center">-->
+
+<!--<i class="material-icons" id="go-to-beginning" onclick="goToBeginning()">first_page</i>-->
+<!--<i class="material-icons" id="previous" onclick="stepBackward()">skip_previous</i>-->
+<!--<i class="material-icons" id="pause" onclick="pause()">pause</i>-->
+<!--<i class="material-icons" id="play" onclick="play()">play_arrow</i>-->
+<!--<i class="material-icons" id="next" onclick="stepForward()">skip_next</i>-->
+<!--<i class="material-icons" id="go-to-end" onclick="goToEnd()">last_page</i>-->
+
+<!--</div>-->
+<!--<div class="gridAction" style="background-color: white">-->
+<!--<div id="status"><p></p></div>-->
+
+
+<!--</div>-->
+<!--<div class="gridLog" style="margin: auto; background-color: white">-->
+<!--<div id="console" class="del" style="width: 600px; height: 200px;"><p style="font-size: 15px"></p></div>-->
+<!--</div>-->
+
+<!--<div class="gridPseudo" style="background-color: white">-->
+<!--<div id="codetrace">-->
+<!--<p id="code1" style="padding-top: 10px;"></p>-->
+<!--<p id="code2"></p>-->
+<!--<p id="code3"></p>-->
+<!--<p id="code4"></p>-->
+<!--<p id="code5"></p>-->
+<!--<p id="code6"></p>-->
+<!--<p id="code7" style="padding-bottom: 10px;"></p>-->
+<!--</div>-->
+
+<!--</div>-->
+
+<!--<div id="actions">-->
+<!--<p id="create" class="execActionA">Create</p>-->
+<!--<p id="search" class="execAction execActionA" onClick="searchGeneric()">Search(v)</p>-->
+<!--<p id="insert" class="execActionA">Insert(i,v)</p>-->
+<!--<p id="remove" class="execAction execActionA" onClick="removeGeneric()">Remove(i)</p>-->
+<!--</div>-->
+<!--<div id="actions-extras">-->
+<!--<div class="create action-menu-pullout">-->
+<!--<div id="create-empty" class="execAction new-menu-option coloured-menu-option"-->
+<!--onClick="empty(); clearConsole()"><p>Empty</p></div>-->
+<!--<div id="create-random" class="execAction new-menu-option coloured-menu-option"-->
+<!--onClick="random(); clearConsole()"><p>Random</p></div>-->
+<!--<div id="create-random-sorted" class="execAction new-menu-option coloured-menu-option"-->
+<!--onClick="randomSorted(); clearConsole()"><p>Random Sorted</p></div>-->
+<!--<div id="create-random-fixed-size" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="createModelingOpen('createfixedsize'); clearConsole()"><p>Random Fixed Size</p>-->
+<!--<div id="createfixedsize-input" class="new-menu-option inputline">-->
+<!--<input type="number" id="v-create-size" class="inputinline"-->
+<!--title="Enter the size of the linked list" autocomplete="off" min=1 max=10 value=7>-->
+<!--<div id="createfixedsize-go" class="execAction coloured-menu-option inputinline"-->
+<!--onClick="randomFixedSize(); clearConsole()" title="Create random fixed size linked list"><p>-->
+<!--Go</p></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="create-from-arr" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="createModelingOpen('createuserdefined')"><p>-&#45;&#45; User Defined List -&#45;&#45;</p>-->
+<!--<div id="createuserdefined-input" class="new-menu-option">-->
+<!--<input type="text" id="v-create-arr" title="Enter the elements separated by comma"-->
+<!--autocomplete="off" value="1,2,3">-->
+<!--<div id="createuserdefined-go" class="execAction coloured-menu-option" onClick="nonRandom()"-->
+<!--title="Create random fixed size linked list"><p>Go</p></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="create-err" class="err"></div>-->
+<!--</div>-->
+<!--<div class="search action-menu-pullout">-->
+
+<!--<div id="search-peek-front" style="display: none;" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="peekDeque('front'); clearConsole()"><p>Front</p></div>-->
+<!--<div id="search-peek-back" style="display: none;" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="peekDeque('back'); clearConsole()"><p>Back</p></div>-->
+
+<!--<div id="search-input" class="new-menu-option">v = <input type="number" id="v-search"-->
+<!--title="Enter an Integer" autocomplete="off" min=0-->
+<!--max=99 value=5 style="display: inline;"></div>-->
+<!--<div id="search-go" class="execAction coloured-menu-option" onclick="searchVertex(); clearConsole()"-->
+<!--style="position: fixed; top: 600px; left: 190px; background: gray;"><p>Go</p></div>-->
+<!--<div id="search-err" class="err"></div>-->
+<!--</div>-->
+<!--<div class="insert action-menu-pullout">-->
+
+
+<!--<div id="pushtop-input" style="display: none;" class="new-menu-option">v = <input type="number"-->
+<!--id="v-push-top-value"-->
+<!--title="Enter an Integer"-->
+<!--autocomplete="off" min=0-->
+<!--max=99 value=53></div>-->
+<!--<div id="pushtop-go" style="display: none;" class="execAction coloured-menu-option"-->
+<!--onclick="pushTop(); clearConsole()"><p>Go</p></div>-->
+
+<!--<div id="enqueueback-input" style="display: none;" class="new-menu-option">v = <input type="number"-->
+<!--id="v-enqueue-back-value"-->
+<!--title="Enter an Integer"-->
+<!--autocomplete="off"-->
+<!--min=0 max=99 value=57>-->
+<!--</div>-->
+<!--<div id="enqueueback-go" style="display: none;" class="execAction coloured-menu-option"-->
+<!--onclick="enqueueBack(); clearConsole()"><p>Go</p></div>-->
+
+<!--<div id="insert-deque-input" style="display: none;" class="new-menu-option">v = <input type="number"-->
+<!--id="v-insert-deque-value"-->
+<!--title="Enter an Integer"-->
+<!--autocomplete="off"-->
+<!--min=0 max=99-->
+<!--value=57></div>-->
+<!--<div id="insert-deque-front" style="display: none;" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="insertDeque('front'); clearConsole()"><p>Front</p></div>-->
+<!--<div id="insert-deque-back" style="display: none;" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="insertDeque('back'); clearConsole()"><p>Back</p></div>-->
+
+
+<!--<div id="insert-head" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="insertModelingOpen('inserthead'); clearConsole()"><p>i = 0 (Head), specify v =</p>-->
+<!--<div id="inserthead-input" class="new-menu-option">-->
+<!--<input type="number" id="v-insert-head-value" title="Enter an Integer" autocomplete="off" min=0-->
+<!--max=99 value=85>-->
+<!--<div id="inserthead-go" class="execAction coloured-menu-option"-->
+<!--onClick="insertHead(); clearConsole()" title="Insert to Head"><p>Go</p></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="insert-tail" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="insertModelingOpen('inserttail'); clearConsole()"><p>i = N (After Tail), specify v =</p>-->
+<!--<div id="inserttail-input" class="new-menu-option">-->
+<!--<input type="number" id="v-insert-tail-value" title="Enter an Integer" autocomplete="off" min=0-->
+<!--max=99 value=80>-->
+<!--<div id="inserttail-go" class="execAction coloured-menu-option"-->
+<!--onClick="insertTail(); clearConsole()" title="Insert to Tail"><p>Go</p></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="insert-kth" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="insertModelingOpen('insertkth'); clearConsole()"><p>specify both i in [1..N-1] and v =</p>-->
+<!--<div id="insertkth-input" class="new-menu-option">-->
+<!--<input type="number" id="v-insert-kth" title="Enter an Integer" autocomplete="off" min=1 max=9-->
+<!--value=2>-->
+<!--<input type="number" id="v-insert-kth-value" title="Enter an Integer" autocomplete="off" min=0-->
+<!--max=99 value=90>-->
+<!--<div id="insertkth-go" class="execAction coloured-menu-option" onClick="insertKth(); clearConsole()"-->
+<!--title="Insert to kth"><p>Go</p></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="insert-err" class="err"></div>-->
+<!--</div>-->
+<!--<div class="remove action-menu-pullout">-->
+
+<!--<div id="remove-deque-front" style="display:none;" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="removeDeque('front'); clearConsole()"><p>Front</p></div>-->
+<!--<div id="remove-deque-back" style="display:none;" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="removeDeque('back'); clearConsole()"><p>Back</p></div>-->
+
+<!--<div id="remove-head" class="execAction new-menu-option coloured-menu-option"-->
+<!--onClick="removeHead(); clearConsole()"><p>Remove i = 0 (Head)</p></div>-->
+<!--<div id="remove-tail" class="execAction new-menu-option coloured-menu-option"-->
+<!--onClick="removeTail(); clearConsole()"><p>Remove i = N-1 (Tail)</p></div>-->
+<!--<div id="remove-kth" class="execAction new-menu-option coloured-menu-option"-->
+<!--onclick="removeModelingOpen('removekth'); clearConsole()"><p>specify i in [1..N-2]</p>-->
+<!--<div id="removekth-input" class="new-menu-option">-->
+<!--<input type="number" id="v-remove-kth" title="Enter an Integer" autocomplete="off" min=1 max=8-->
+<!--value=2>-->
+<!--<div id="removekth-go" class="execAction coloured-menu-option" onClick="removeKth(); clearConsole()"-->
+<!--title="Remove k-th"><p>Go</p></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div id="remove-err" class="err"></div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="gridFooter">FOOTER</div>-->
+<!--</div>-->
 
 
 <script src="../../code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -2107,7 +2373,7 @@ function CUSTOM_ACTION(action, data, mode) {
     var isCreateOpen = false, isSearchOpen = false, isInsertOpen = false, isRemoveOpen = false;
 
     function openCreate() {
-        $(".create").css("bottom", "146px");
+        $(".create").css("top", "690px");
         $('#createfixedsize-input').hide();
         $('#createuserdefined-input').hide();
         if (!isCreateOpen) {
@@ -2126,6 +2392,7 @@ function CUSTOM_ACTION(action, data, mode) {
 
     function openSearch() {
         if (!isSearchOpen) {
+            $(".search").css("top", "720px");
             $('.search').fadeIn('fast');
             isSearchOpen = true;
         }
@@ -2140,7 +2407,7 @@ function CUSTOM_ACTION(action, data, mode) {
     }
 
     function openInsert() {
-        $(".insert").css("bottom", "92px");
+        $(".insert").css("top", "750px");
         $('#insertkth-input').hide();
         $('#inserthead-input').hide();
         $('#inserttail-input').hide();
@@ -2159,7 +2426,7 @@ function CUSTOM_ACTION(action, data, mode) {
     }
 
     function openRemove() {
-        $(".remove").css("bottom", "65px");
+        $(".remove").css("top", "780px");
         $('#removekth-input').hide();
         if (!isRemoveOpen) {
             $('.remove').fadeIn('fast');
@@ -2191,8 +2458,8 @@ function CUSTOM_ACTION(action, data, mode) {
         showActionsPanel();
         hideStatusPanel();
 //  hideCodetracePanel();
-        $("#title-LL").text("Linked List");
-        $("#title-DLL").text("Doubly Linked List");
+//         $("#title-LL").text("Linked List");
+//         $("#title-DLL").text("Doubly Linked List");
     }
 
     $('#title-LL').click(function () {
@@ -2200,7 +2467,7 @@ function CUSTOM_ACTION(action, data, mode) {
         displayList();
         changeTextList();
         lw.setActiveStatus("list");
-        $("#title-LL").text('Linked List');
+        // $("#title-LL").text('Linked List');
         title.innerHTML = "Linked List";
         // note.innerHTML = '<h1>LINKED LIST</h1><br/>';
         clearConsole();
@@ -2232,7 +2499,7 @@ function CUSTOM_ACTION(action, data, mode) {
         displayList();
         changeTextDoublyList();
         lw.setActiveStatus("doublylist");
-        $("#title-DLL").text('Doubly Linked List');
+        // $("#title-DLL").text('Doubly Linked List');
         title.innerHTML = "Doubly Linked List";
         // note.innerHTML = '<h1>DOUBLY LINKED LIST</h1><br/>';
         clearConsole();
