@@ -257,6 +257,62 @@
 
 
 
+
+
+    <!--</div>-->
+<!--</div>-->
+<!--<div id="dark-overlay"></div>-->
+<!--<div id="status" class="panel"><p></p></div>-->
+<!--<div id="status-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"-->
+                                              <!--title="show/hide status panel"/></div>-->
+<!--<div id="codetrace" class="panel">-->
+    <!--<p id="code1" style="padding-top: 10px;"></p>-->
+    <!--<p id="code2"></p>-->
+    <!--<p id="code3"></p>-->
+    <!--<p id="code4"></p>-->
+    <!--<p id="code5"></p>-->
+    <!--<p id="code6"></p>-->
+    <!--<p id="code7" style="padding-bottom: 10px;"></p>-->
+<!--</div>-->
+<!--<div id="codetrace-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"-->
+                                                 <!--title="show/hide codetrace panel"/></div>-->
+
+<!--<div id="top-header">-->
+    <!--<ul>-->
+        <!--<li class="dropdown-menu">-->
+            <!--<a>-->
+                <!--<i class="fa fa-question-circle-o">Tree</i>-->
+                <!--<i class="fa fa-caret-down"></i>-->
+            <!--</a>-->
+            <!--<ul id="title" class="dropdown-content dropdown-content-left">-->
+                <!--<li><a id='title-BST' class='selected-viz'>Binary Search Tree</a></li>-->
+                <!--<li><a id='title-AVL'>AVL Tree</a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+
+<!--<div id="left-bar">-->
+
+<!--</div>-->
+
+<!--<div id='viz'></div>-->
+
+
+<!--<div id="actions" class="panel">-->
+    <!--<p id="create">Create</p>-->
+    <!--<p id="search">Search(v)</p>-->
+    <!--<p id="insert">Insert(v)</p>-->
+    <!--<p id="remove">Remove(v)</p>-->
+<!--</div>-->
+
+<!--<div id="actions-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"-->
+                                               <!--title="show/hide actions panel"/></div>-->
+
+
+
+
 <script src="../../code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
     var PHP_DOMAIN = "";
@@ -315,7 +371,17 @@
         $('#loading-overlay').hide();
     }
 
-
+    function commonAction(retval, msg) {
+        //setTimeout(function() {
+        if (retval) { // mode == "exploration" && // now not only for exploration mode, but check if this opens other problems
+            $('#current-action').show();
+            $('#current-action').html(mode == "exploration" ? msg : ("e-Lecture Example (auto play until done)<br>" + msg));
+            $('#progress-bar').slider("option", "max", gw.getTotalIteration() - 1);
+            triggerRightPanels();
+            isPlaying = true;
+        }
+        //}, 500);
+    }
 
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
@@ -336,21 +402,21 @@
 
 
     // title
-    // $('#title a').click(function () {
-    //     $('#title a').removeClass('selected-viz');
-    //     $(this).addClass('selected-viz');
-    //
-    //     // temporary quick fix for Google Chrome Aug 2016 issue...
-    //     document.getElementById("#title a");
-    //     setTimeout(function () {
-    //         document.body.style.zoom = "100.1%";
-    //     }, 100); // force resize/redraw...
-    //     setTimeout(function () {
-    //         document.body.style.zoom = "100%";
-    //     }, 600);
-    //
-    //
-    // });
+    $('#title a').click(function () {
+        $('#title a').removeClass('selected-viz');
+        $(this).addClass('selected-viz');
+
+        // temporary quick fix for Google Chrome Aug 2016 issue...
+        document.getElementById("#title a");
+        setTimeout(function () {
+            document.body.style.zoom = "100.1%";
+        }, 100); // force resize/redraw...
+        setTimeout(function () {
+            document.body.style.zoom = "100%";
+        }, 600);
+
+
+    });
 
     $('#status').bind("DOMSubtreeModified", function () {
         $('#console').append($('#status').html());
@@ -2854,7 +2920,6 @@
         bw.generateRandom();
         var five_modes = ["BST", "AVL"];
         $('#title-' + five_modes[Math.floor(Math.random() * 2)]).click();
-
         var bstMode = getQueryVariable("mode");
         if (bstMode.length > 0)
             $('#title-' + bstMode).click();
@@ -2936,9 +3001,6 @@
 
         bw.isAVL(true);
     });
-
-
-
 
     function empty() {
         if (isPlaying) stop();
