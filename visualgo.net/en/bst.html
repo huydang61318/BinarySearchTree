@@ -22,218 +22,99 @@
     <link rel="stylesheet" href="../css/navbar.css">
 
     <style>
-        .execAction {
-            padding: 5px 8px;
+        #actions {
+            color: black;
+            /*position: fixed;*/
+            /*top: 570px;*/
+            /*left: 5px;*/
         }
 
-        .err {
-            padding: 5px 0px;
-        }
+        /*.execAction {*/
+        /*padding: 5px 8px;*/
+        /*height: auto;*/
+        /*}*/
+
+        /*.err {*/
+        /*padding: 5px 0px;*/
+        /*}*/
+
+        /*.execActionA {*/
+        /*width: 50px;*/
+        /*}*/
+
+        /*#actions-extras {*/
+        /*bottom: 30px;*/
+        /*}*/
 
         #actions-extras input {
             width: 35px;
             padding: 5px 8px 7px;
         }
 
-        #insert-input input, #remove-input input {
-            width: 100px;
-        }
-
         .create {
-            bottom: 200px;
+            top: 690px;
         }
 
         .search {
-            bottom: 173px;
+            top: 720px;
         }
 
         .insert {
-            bottom: 146px;
+            top: 750px;
         }
 
         .remove {
-            bottom: 119px;
+            top: 780px;
         }
 
-        #menu {
-            background: blue;
-            color: aliceblue;
-            width: 154px;
+        #createfixedsize-input input, #createuserdefined-input input {
+            float: left;
         }
 
-        #menu:hover {
+        #createfixedsize-go p, #createuserdefined-go p {
+            float: right;
+        }
+
+        #createuserdefined-input input {
+            width: 80px;
+        }
+
+        #inserthead-input input, #inserttail-input input, #insertkth-input input {
+            float: left;
+        }
+
+        #insertkth-input input {
+            margin-right: 3px;
+        }
+
+        #inserthead-go p, #inserttail-go p, #insertkth-go p {
+            float: right;
+        }
+
+        #removekth-input input {
+            float: left;
+        }
+
+        #removekth-go p {
+            float: right;
+        }
+
+        .inputline {
+            display: inline;
+        }
+
+        . inputinline {
+            display: inline;
+        }
+
+        .gridMenu a {
             cursor: pointer;
         }
 
-        body {
-            background: yellow;
+        .gridTimeline {
+            cursor: pointer;
         }
-
-        #top-header {
-            font-size: 2em;
-            width: 140px;
-            left: 10px;
-        }
-
-        #top-header ul {
-            display: block;
-            text-align: center;
-            list-style: inside none;
-            margin-bottom: 0;
-            margin-top: 0;
-            border-bottom: 1px solid #ccc;
-        }
-
-        #top-header > ul > li {
-            display: inline-block;
-        }
-
-        #top-header ul a {
-            color: #999;
-            padding: 5px 15px;
-            display: block;
-        }
-
-        #top-header > ul > li > a > i {
-            color: #4bc970;
-        }
-
-        .dropdown-menu {
-            position: relative;
-        }
-
-        .dropdown-menu > a {
-            border-left: 1px solid transparent;
-            border-right: 1px solid transparent;
-            transition: all 0.5s;
-        }
-
-        .dropdown-menu:hover > a {
-            background: #fff;
-            border-left-color: #ccc;
-            border-right-color: #ccc;
-        }
-
-        #top-header .dropdown-content {
-            display: none;
-            padding: 0;
-            background: #fff;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-top: 0;
-            z-index: 1000;
-            position: absolute;
-            top: 100%;
-        }
-
-        .dropdown-content-left {
-            left: 0;
-        }
-
-        .dropdown-content-right {
-            right: 0;
-        }
-
-        .dropdown-content li {
-            white-space: nowrap;
-            display: block;
-            width: 100%;
-        }
-
-        .dropdown-content li a:hover {
-            background-color: bisque;
-        }
-
-        #top-header .dropdown-menu:hover .dropdown-content {
-            display: block;
-        }
-
-        #status {
-            background: #00bfff;
-        }
-
-        #status-hide {
-            background: #00bfff;
-        }
-
-        #codetrace-hide {
-            background: #00EE76;
-        }
-
-        #codetrace {
-            background: #00EE76;
-        }
-
-        #actions {
-            background: #008B00;
-        }
-
-        #left-bar {
-            background: #FA8072;
-            width: 120px;
-            z-index: -1;
-        }
-
-        #mode-menu, #top-bar {
-            background: #9BCD9B;
-            height: 40px;
-            z-index: 0;
-        }
-
-        #bottom-bar {
-            background: #9BCD9B;
-            z-index: 0;
-        }
-
-        body {
-            background: #FFF68F;
-        }
-
-        #sort-go {
-            background: #00bfff;
-            position: fixed;
-            bottom: 55px;
-            left: 199px;
-        }
-
-        #sort-viz {
-            left: 200x;
-        }
-
-        #a123, #a133 {
-            font-size: 3em;
-            color: red;
-            left: 300px;
-            text-align: center;
-            line-height: inherit;
-        }
-
-
     </style>
-
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-1566631-4', 'auto');
-        ga('send', 'pageview');
-
-        function changeURL() {
-            var URL = window.location.href.split('../index.html');
-            var val = document.getElementById("Language").value;
-            URL[3] = val;
-            window.location.assign(URL.join('../index.html'));
-        }
-    </script>
 
 </head>
 
@@ -269,115 +150,111 @@
     </ul>
 </nav>
 
-
-
-
-
-
-
-    </div>
-</div>
-<div id="dark-overlay"></div>
-<div id="status" class="panel"><p></p></div>
-<div id="status-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"
-                                              title="show/hide status panel"/></div>
-<div id="codetrace" class="panel">
-    <p id="code1" style="padding-top: 10px;"></p>
-    <p id="code2"></p>
-    <p id="code3"></p>
-    <p id="code4"></p>
-    <p id="code5"></p>
-    <p id="code6"></p>
-    <p id="code7" style="padding-bottom: 10px;"></p>
-</div>
-<div id="codetrace-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"
-                                                 title="show/hide codetrace panel"/></div>
-
-<div id="top-header">
-    <ul>
-        <li class="dropdown-menu">
-            <a>
-                <i class="fa fa-question-circle-o">Tree</i>
-                <i class="fa fa-caret-down"></i>
-            </a>
-            <ul id="title" class="dropdown-content dropdown-content-left">
-                <li><a id='title-BST' class='selected-viz'>Binary Search Tree</a></li>
-                <li><a id='title-AVL'>AVL Tree</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
-
-
-<div id="left-bar">
-
-</div>
-
-<div id='viz'></div>
-
-
-<div id="actions" class="panel">
-    <p id="create">Create</p>
-    <p id="search">Search(v)</p>
-    <p id="insert">Insert(v)</p>
-    <p id="remove">Remove(v)</p>
-</div>
-
-<div id="actions-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"
-                                               title="show/hide actions panel"/></div>
-<div id="actions-extras">
-    <div class="create action-menu-pullout">
-        <div id="create-empty" class="execAction new-menu-option coloured-menu-option" onClick="empty()"><p>Empty</p>
+<div class="area">
+    <div class="container">
+        <div class="gridHeader">
+            <div id="title" style="font-size: 20px; color: white"></div>
         </div>
-        <div id="create-example1" class="execAction new-menu-option coloured-menu-option" onClick="example(1)"><p>
-            Unbalanced Example</p></div>
-        <div id="create-example2" class="execAction new-menu-option coloured-menu-option" onClick="example(2)"><p>
-            Balanced Example</p></div>
-        <div id="create-random" class="execAction new-menu-option coloured-menu-option" onClick="random()"><p>Random</p>
+        <div class="gridGraph" style="background-color: white ; text-align: center; line-height: inherit">
+            <svg id="viz" style="margin: 10px;"></svg>
+
+
         </div>
-        <div id="create-skewed-left" class="execAction new-menu-option coloured-menu-option" onClick="skewed('left')">
-            <p>Skewed Left</p></div>
-        <div id="create-skewed-right" class="execAction new-menu-option coloured-menu-option" onClick="skewed('right')">
-            <p>Skewed Right</p></div>
-        <div id="create-err" class="err"></div>
+
+        <div class="gridNote">
+            <div id="noteContent" style="text-align: justify">
+
+            </div>
+            <div id="log" class="panel"><p style="font-size: 15px"></p></div>
+        </div>
+        <div class="gridTimeline" style="background-color: white; text-align: center">
+            <i class="material-icons" id="go-to-beginning" onclick="goToBeginning()">first_page</i>
+            <i class="material-icons" id="previous" onclick="stepBackward()">skip_previous</i>
+            <i class="material-icons" id="pause" onclick="pause()">pause</i>
+            <i class="material-icons" id="play" onclick="play()">play_arrow</i>
+            <i class="material-icons" id="next" onclick="stepForward()">skip_next</i>
+            <i class="material-icons" id="go-to-end" onclick="goToEnd()">last_page</i>
+        </div>
+        <div class="gridControl" style="background-color: white">
+            <div id="actions">
+                <p id="create" class="execActionA">Create</p>
+                <p id="search" class="execAction execActionA" onClick="searchGeneric()">Search(v)</p>
+                <p id="insert" class="execActionA">Insert(i,v)</p>
+                <p id="remove" class="execAction execActionA" onClick="removeGeneric()">Remove(i)</p>
+            </div>
+
+            <div id="actions-extras">
+                <div class="create action-menu-pullout">
+                    <div id="create-empty" class="execAction new-menu-option coloured-menu-option" onClick="empty(); clearConsole() "><p>Empty</p>
+                    </div>
+                    <div id="create-example1" class="execAction new-menu-option coloured-menu-option" onClick="example(1); clearConsole() "><p>
+                        Unbalanced Example</p></div>
+                    <div id="create-example2" class="execAction new-menu-option coloured-menu-option" onClick="example(2); clearConsole() "><p>
+                        Balanced Example</p></div>
+                    <div id="create-random" class="execAction new-menu-option coloured-menu-option" onClick="random(); clearConsole() "><p>Random</p>
+                    </div>
+                    <div id="create-skewed-left" class="execAction new-menu-option coloured-menu-option" onClick="skewed('left'); clearConsole() ">
+                        <p>Skewed Left</p></div>
+                    <div id="create-skewed-right" class="execAction new-menu-option coloured-menu-option" onClick="skewed('right'); clearConsole() ">
+                        <p>Skewed Right</p></div>
+                    <div id="create-err" class="err"></div>
+                </div>
+                <div class="search action-menu-pullout">
+                    <div id="find-min" class="execAction new-menu-option coloured-menu-option" onClick="findMinMax(true); clearConsole() "><p>Find
+                        Minimum</p></div>
+                    <div id="find-max" class="execAction new-menu-option coloured-menu-option" onClick="findMinMax(false); clearConsole() "><p>Find
+                        Maximum</p></div>
+                    <div id="search-input" class="new-menu-option">v = <input type="number" id="v-search" title="Enter an Integer"
+                                                                              autocomplete="off" min=0 max=99 value=7 ; style=" width: 100%"></div>
+                    <div id="search-go" class="execAction coloured-menu-option" onclick="searchVertex(); clearConsole() "><p>Go</p></div>
+                    <div id="search-err" class="err"></div>
+                </div>
+                <div class="insert action-menu-pullout">
+                    <div id="insert-input" class="new-menu-option">v = <input type="text" id="v-insert"
+                                                                              title="Enter an Integer or comma-separated array of Integers"
+                                                                              autocomplete="off" value="1,77" ; style=" width: 100%"></div>
+                    <div id="insert-go" class="execAction coloured-menu-option" onclick="insertVertex(); clearConsole() "><p>Go</p></div>
+                    <div id="insert-err" class="err"></div>
+                </div>
+                <div class="remove action-menu-pullout">
+                    <div id="remove-input" class="new-menu-option">v = <input type="text" id="v-remove"
+                                                                              title="Enter an Integer or comma-separated array of Integers"
+                                                                              autocomplete="off" value="1,77" ; style=" width: 100%"></div>
+                    <div id="remove-go" class="execAction coloured-menu-option" onclick="removeVertex(); clearConsole() "><p>Go</p></div>
+                    <div id="remove-err" class="err"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="gridAction" style="background-color: white">
+            <div id="status" class="panel"><p style="font-size: 15px"></p></div>
+        </div>
+        <div class="gridLog" style="margin: auto; background-color: white">
+            <div id="console" class="del"  style="width: 600px; height: 200px;"><p style="font-size: 15px"></p></div>
+        </div>
+        <div class="gridPseudo" style="background-color: white">
+            <div id="codetrace" class="panel">
+                <p id="code1" style="padding-top: 10px;"></p>
+                <p id="code2"></p>
+                <p id="code3"></p>
+                <p id="code4"></p>
+                <p id="code5"></p>
+                <p id="code6"></p>
+                <p id="code7"></p>
+                <p id="code8"></p>
+                <p id="code9"></p>
+                <p id="code10"></p>
+                <p id="code11"></p>
+                <p id="code12" style="padding-bottom: 10px;"></p>
+            </div>
+        </div>
+
+        <div class="gridFooter" style="background-color: #212121; height: 50px; position: absolute; bottom: 0px;">
+            FOOTER
+        </div>
     </div>
-    <div class="search action-menu-pullout">
-        <div id="find-min" class="execAction new-menu-option coloured-menu-option" onClick="findMinMax(true)"><p>Find
-            Minimum</p></div>
-        <div id="find-max" class="execAction new-menu-option coloured-menu-option" onClick="findMinMax(false)"><p>Find
-            Maximum</p></div>
-        <div id="search-input" class="new-menu-option">v = <input type="number" id="v-search" title="Enter an Integer"
-                                                                  autocomplete="off" min=0 max=99 value=7></div>
-        <div id="search-go" class="execAction coloured-menu-option" onclick="searchVertex()"><p>Go</p></div>
-        <div id="search-err" class="err"></div>
-    </div>
-    <div class="insert action-menu-pullout">
-        <div id="insert-input" class="new-menu-option">v = <input type="text" id="v-insert"
-                                                                  title="Enter an Integer or comma-separated array of Integers"
-                                                                  autocomplete="off" value="1,77"></div>
-        <div id="insert-go" class="execAction coloured-menu-option" onclick="insertVertex()"><p>Go</p></div>
-        <div id="insert-err" class="err"></div>
-    </div>
-    <div class="remove action-menu-pullout">
-        <div id="remove-input" class="new-menu-option">v = <input type="text" id="v-remove"
-                                                                  title="Enter an Integer or comma-separated array of Integers"
-                                                                  autocomplete="off" value="1,77"></div>
-        <div id="remove-go" class="execAction coloured-menu-option" onclick="removeVertex()"><p>Go</p></div>
-        <div id="remove-err" class="err"></div>
-    </div>
-    <div class="predsucc action-menu-pullout">
-        <div id="predsucc-input" class="new-menu-option">v = <input type="number" id="v-predsucc"
-                                                                    title="Enter an Integer" autocomplete="off" min=0
-                                                                    max=99 value=15></div>
-        <div id="predsucc-pred-go" class="execAction coloured-menu-option" onclick="predsucc(true)"><p>Get
-            Predecessor</p></div>
-        <div id="predsucc-succ-go" class="execAction coloured-menu-option" onclick="predsucc(false)"><p>Get
-            Successor</p></div>
-        <div id="predsucc-err" class="err"></div>
-    </div>
-    <div class="inorder action-menu-pullout"></div>
 </div>
-<!--<div id="bottom-bar"></div>-->
+
 
 
 <script src="../../code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -438,17 +315,7 @@
         $('#loading-overlay').hide();
     }
 
-    function commonAction(retval, msg) {
-        //setTimeout(function() {
-        if (retval) { // mode == "exploration" && // now not only for exploration mode, but check if this opens other problems
-            $('#current-action').show();
-            $('#current-action').html(mode == "exploration" ? msg : ("e-Lecture Example (auto play until done)<br>" + msg));
-            $('#progress-bar').slider("option", "max", gw.getTotalIteration() - 1);
-            triggerRightPanels();
-            isPlaying = true;
-        }
-        //}, 500);
-    }
+
 
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
@@ -469,21 +336,30 @@
 
 
     // title
-    $('#title a').click(function () {
-        $('#title a').removeClass('selected-viz');
-        $(this).addClass('selected-viz');
+    // $('#title a').click(function () {
+    //     $('#title a').removeClass('selected-viz');
+    //     $(this).addClass('selected-viz');
+    //
+    //     // temporary quick fix for Google Chrome Aug 2016 issue...
+    //     document.getElementById("#title a");
+    //     setTimeout(function () {
+    //         document.body.style.zoom = "100.1%";
+    //     }, 100); // force resize/redraw...
+    //     setTimeout(function () {
+    //         document.body.style.zoom = "100%";
+    //     }, 600);
+    //
+    //
+    // });
 
-        // temporary quick fix for Google Chrome Aug 2016 issue...
-        document.getElementById("#title a");
-        setTimeout(function () {
-            document.body.style.zoom = "100.1%";
-        }, 100); // force resize/redraw...
-        setTimeout(function () {
-            document.body.style.zoom = "100%";
-        }, 600);
-
-
+    $('#status').bind("DOMSubtreeModified", function () {
+        $('#console').append($('#status').html());
     });
+
+    function clearConsole(callback) {
+        $('#console').html('');
+
+    }
 
     // overlays stuffs
 
@@ -2976,6 +2852,8 @@
         bw = new BST();
         gw = bw.getGraphWidget();
         bw.generateRandom();
+        var five_modes = ["BST", "AVL"];
+        $('#title-' + five_modes[Math.floor(Math.random() * 2)]).click();
 
         var bstMode = getQueryVariable("mode");
         if (bstMode.length > 0)
@@ -3039,23 +2917,28 @@
     // title changing
     $('#title-BST').click(function () {
         if (isPlaying) stop();
-        $("#a133").remove();
+        // lw.setActiveStatus("BST");
+        title.innerHTML = "BINARY SEARCH TREE";
         showActionsPanel();
         hideStatusPanel();
         hideCodetracePanel();
-        $("#mode-menu").append('<H1 id = "a123">Binary Seacrh Tree</H1>');
+
         bw.isAVL(false);
     });
 
     $('#title-AVL').click(function () {
         if (isPlaying) stop();
+        // lw.setActiveStatus("AVL");
+        title.innerHTML = "AVL TREE";
         showActionsPanel();
         hideStatusPanel();
         hideCodetracePanel();
-        $("#a123").remove();
-        $("#mode-menu").append('<div id = "a133">AVL Seacrh Tree</div>');
+
         bw.isAVL(true);
     });
+
+
+
 
     function empty() {
         if (isPlaying) stop();

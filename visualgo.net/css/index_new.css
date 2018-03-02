@@ -115,6 +115,9 @@ div ul {
 .gridLog {
     grid-area: l;
     border: 1px solid black;
+    /*color: white;*/
+    overflow: scroll;
+    /*background-color: #2A2E45;*/
 
 }
 
