@@ -191,6 +191,7 @@ function isAtEnd() {
     return (gw.getCurrentIteration() == (gw.getTotalIteration() - 1));
 }
 
+
 function pause() {
     if (isPlaying) {
         isPaused = true;
@@ -206,7 +207,8 @@ function play() {
         $('#pause').show();
         $('#play').hide();
         if (isAtEnd())
-            gw.replay(); else
+            gw.replay();
+        else
             gw.play();
     }
 }
@@ -249,4 +251,35 @@ function stop() {
     isPlaying = false;
     $('#pause').show();
     $('#play').hide();
+}
+
+
+$('#status').bind("DOMSubtreeModified",function(){
+
+    $('#console').prepend($('#status').html());
+
+});
+
+function clearConsole(callback) {
+    $('#console').html('');
+}
+
+function removeFirstLine(){
+    $('#console').find('p').first().remove();
+    $('#console').find('p').first().remove();
+    $('#console').find('p').first().remove();
+    $('#console').find('p').first().remove();
+}
+
+
+function checkPlay(){
+    if (isAtEnd()){
+        clearConsole();
+    }
+}
+
+function checkEnd(){
+    if (!isAtEnd()){
+        goToEnd();
+    }
 }
