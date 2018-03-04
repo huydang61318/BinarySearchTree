@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99b5ff22-d0a8-4f5c-9b59-8144ee91bc94" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/code.jquery.com/jquery-3.1.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/code.jquery.com/ui/1.12.1/jquery-ui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/visualgo.net/css/navbar.css" afterPath="$PROJECT_DIR$/visualgo.net/css/navbar.css" />
-      <change beforePath="$PROJECT_DIR$/visualgo.net/css/viz.css" afterPath="$PROJECT_DIR$/visualgo.net/css/viz.css" />
-      <change beforePath="$PROJECT_DIR$/visualgo.net/en/bst.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/visualgo.net/en/list.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/visualgo.net/en/sorting.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js" afterPath="$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js" />
-    </list>
+    <list default="true" id="99b5ff22-d0a8-4f5c-9b59-8144ee91bc94" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -38,8 +27,8 @@
       <file leaf-file-name="bst.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/visualgo.net/bst.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="242" column="34" lean-forward="true" selection-start-line="242" selection-start-column="34" selection-end-line="242" selection-end-column="34" />
+            <state relative-caret-position="221">
+              <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
               <folding>
                 <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -167,7 +156,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="146" />
     <option name="y" value="391" />
     <option name="width" value="1400" />
@@ -291,15 +280,15 @@
       <workItem from="1519917219221" duration="7230000" />
       <workItem from="1519956717967" duration="5532000" />
       <workItem from="1520156818096" duration="728000" />
-      <workItem from="1520176639918" duration="2986000" />
+      <workItem from="1520176639918" duration="3260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34783000" />
+    <option name="totallyTimeSpent" value="35057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -717,8 +706,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/visualgo.net/bst.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="242" column="34" lean-forward="true" selection-start-line="242" selection-start-column="34" selection-end-line="242" selection-end-column="34" />
+        <state relative-caret-position="221">
+          <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
           <folding>
             <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
