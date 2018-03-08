@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
@@ -7,7 +7,7 @@
 
     <title>Binary Search Tree, AVL Tree</title>
 
-    <link rel="stylesheet" type="text/css" href="../fonts/silkscreen/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="css/viz.css">
     <link rel="stylesheet" href="css/visual.css">
@@ -166,12 +166,12 @@
             <div id="log" class="panel"><p style="font-size: 15px"></p></div>
         </div>
         <div class="gridTimeline" style="background-color: white; text-align: center">
-            <i class="material-icons" id="go-to-beginning" onclick="goToBeginning()">first_page</i>
-            <i class="material-icons" id="previous" onclick="stepBackward()">skip_previous</i>
+            <i class="material-icons" id="go-to-beginning" onclick="clearConsole(); goToBeginning();">first_page</i>
+            <i class="material-icons" id="previous" onclick="stepBackward(); removeFirstLine();">skip_previous</i>
             <i class="material-icons" id="pause" onclick="pause()">pause</i>
-            <i class="material-icons" id="play" onclick="play()">play_arrow</i>
+            <i class="material-icons" id="play" onclick="checkPlay(); play()">play_arrow</i>
             <i class="material-icons" id="next" onclick="stepForward()">skip_next</i>
-            <i class="material-icons" id="go-to-end" onclick="goToEnd()">last_page</i>
+            <i class="material-icons" id="go-to-end" onclick="checkEnd();">last_page</i>
         </div>
         <div class="gridControl" style="background-color: white">
             <div id="actions">
@@ -224,92 +224,35 @@
             </div>
 
         </div>
-        <div class="gridAction" style="background-color: white">
-            <div id="status" class="panel"><p style="font-size: 15px"></p></div>
+        <div class="gridAction" style="background-color: white" id="status" class="panel"><p style="font-size: 15px"></p>
+            <!--<div id="status" class="panel"><p style="font-size: 15px"></p></div>-->
         </div>
-        <div class="gridLog" style="margin: auto; background-color: white">
-            <div id="console" class="del"  style="width: 600px; height: 200px;"><p style="font-size: 15px"></p></div>
-        </div>
-        <div class="gridPseudo" style="background-color: white">
-            <div id="codetrace" class="panel">
-                <p id="code1" style="padding-top: 10px;"></p>
-                <p id="code2"></p>
-                <p id="code3"></p>
-                <p id="code4"></p>
-                <p id="code5"></p>
-                <p id="code6"></p>
-                <p id="code7"></p>
-                <p id="code8"></p>
-                <p id="code9"></p>
-                <p id="code10"></p>
-                <p id="code11"></p>
-                <p id="code12" style="padding-bottom: 10px;"></p>
+        <div class="gridLog">
+            <div id="console">
             </div>
         </div>
-
-        <div class="gridFooter" style="background-color: #212121; height: 50px; position: absolute; bottom: 0px;">
-            FOOTER
+        <div class="gridPseudo" style="background-color: white" id="codetrace" class="panel">
+            <!--<div id="codetrace" class="panel">-->
+            <p id="code1" style="padding-top: 10px;"></p>
+            <p id="code2"></p>
+            <p id="code3"></p>
+            <p id="code4"></p>
+            <p id="code5"></p>
+            <p id="code6"></p>
+            <p id="code7"></p>
+            <p id="code8"></p>
+            <p id="code9"></p>
+            <p id="code10"></p>
+            <p id="code11"></p>
+            <p id="code12" style="padding-bottom: 10px;"></p>
         </div>
     </div>
+
+    <div class="gridFooter" style="background-color: #212121; height: 50px; position: absolute; bottom: 0px;">
+        FOOTER
+    </div>
 </div>
-
-
-
-
-
-    <!--</div>-->
-<!--</div>-->
-<!--<div id="dark-overlay"></div>-->
-<!--<div id="status" class="panel"><p></p></div>-->
-<!--<div id="status-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"-->
-                                              <!--title="show/hide status panel"/></div>-->
-<!--<div id="codetrace" class="panel">-->
-    <!--<p id="code1" style="padding-top: 10px;"></p>-->
-    <!--<p id="code2"></p>-->
-    <!--<p id="code3"></p>-->
-    <!--<p id="code4"></p>-->
-    <!--<p id="code5"></p>-->
-    <!--<p id="code6"></p>-->
-    <!--<p id="code7" style="padding-bottom: 10px;"></p>-->
-<!--</div>-->
-<!--<div id="codetrace-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"-->
-                                                 <!--title="show/hide codetrace panel"/></div>-->
-
-<!--<div id="top-header">-->
-    <!--<ul>-->
-        <!--<li class="dropdown-menu">-->
-            <!--<a>-->
-                <!--<i class="fa fa-question-circle-o">Tree</i>-->
-                <!--<i class="fa fa-caret-down"></i>-->
-            <!--</a>-->
-            <!--<ul id="title" class="dropdown-content dropdown-content-left">-->
-                <!--<li><a id='title-BST' class='selected-viz'>Binary Search Tree</a></li>-->
-                <!--<li><a id='title-AVL'>AVL Tree</a></li>-->
-            <!--</ul>-->
-        <!--</li>-->
-    <!--</ul>-->
-<!--</div>-->
-
-
-<!--<div id="left-bar">-->
-
-<!--</div>-->
-
-<!--<div id='viz'></div>-->
-
-
-<!--<div id="actions" class="panel">-->
-    <!--<p id="create">Create</p>-->
-    <!--<p id="search">Search(v)</p>-->
-    <!--<p id="insert">Insert(v)</p>-->
-    <!--<p id="remove">Remove(v)</p>-->
-<!--</div>-->
-
-<!--<div id="actions-hide" class="panel-hide"><img src="../img/arrow_white_right.png" alt=">"-->
-                                               <!--title="show/hide actions panel"/></div>-->
-
-
-
+</div>
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
@@ -2692,7 +2635,7 @@
                     $('#code7').html('');
                     break;
                 case 4: // search
-                        //$('#code1').html('if this == null');  //code_search_1
+                    //$('#code1').html('if this == null');  //code_search_1
                     $('#code1').html('if this == null');
                     //$('#code2').html('&nbsp;&nbsp;return null');  //code_search_2
                     $('#code2').html('&nbsp;&nbsp;return null');
@@ -2708,7 +2651,7 @@
                     $('#code7').html('else search left');
                     break;
                 case 0: // Insert
-                        //$('#code1').html('if insertion point is found');  //code_insert_1
+                    //$('#code1').html('if insertion point is found');  //code_insert_1
                     $('#code1').html('if insertion point is found');
                     //$('#code2').html('&nbsp;&nbsp;create new vertex');  //code_insert_2
                     $('#code2').html('&nbsp;&nbsp;create new vertex');
@@ -2722,7 +2665,7 @@
                     $('#code7').html('');
                     break;
                 case 5: // remove
-                        //$('#code1').html('search for v'); //code_remove_1
+                    //$('#code1').html('search for v'); //code_remove_1
                     $('#code1').html('search for v');
                     //$('#code2').html('if v is a leaf'); //code_remove_2
                     $('#code2').html('if v is a leaf');
@@ -2784,7 +2727,7 @@
                     $('#code7').html('&nbsp;&nbsp;else return p');
                     break;
                 case 3: // inorder traversal
-                        //$('#code1').html('if this is null');  //code_inorder_1
+                    //$('#code1').html('if this is null');  //code_inorder_1
                     $('#code1').html('if this is null');
                     //$('#code2').html('&nbsp;&nbsp;return'); //code_inorder_2
                     $('#code2').html('&nbsp;&nbsp;return');
@@ -2802,8 +2745,8 @@
 
 
     // BSTaction.js
-    var actionsWidth = 150;
-    var statusCodetraceWidth = 420;
+    var actionsWidth;
+    var statusCodetraceWidth;
 
     var isCreateOpen = false, isSearchOpen = false, isInsertOpen = false, isRemoveOpen = false, isPredSuccOpen = false,
         isInorderOpen = false;
@@ -2978,13 +2921,14 @@
     });
 
     // title changing
+    var note = document.getElementById('noteContent');
+
     $('#title-BST').click(function () {
         if (isPlaying) stop();
         // lw.setActiveStatus("BST");
         title.innerHTML = "BINARY SEARCH TREE";
-        showActionsPanel();
-        hideStatusPanel();
-        hideCodetracePanel();
+        note.innerHTML = '<h1>BINARY SEARCH TREE</h1><br/>';
+        note.innerHTML += "<div>BST is a collection of nodes arranged in a way where they maintain BST properties. Each node has a key and an associated value. While searching, the desired key is compared to the keys in BST and if found, the associated value is retrieved.</div>"
 
         bw.isAVL(false);
     });
@@ -2993,9 +2937,8 @@
         if (isPlaying) stop();
         // lw.setActiveStatus("AVL");
         title.innerHTML = "AVL TREE";
-        showActionsPanel();
-        hideStatusPanel();
-        hideCodetracePanel();
+        note.innerHTML = '<h1>AVL TREE</h1><br/>';
+        note.innerHTML += "<div>Named after their inventor Adelson, Velski & Landis, AVL trees are height balancing binary search tree. AVL tree checks the height of the left and the right sub-trees and assures that the difference is not more than 1. This difference is called the Balance Factor.</div>"
 
         bw.isAVL(true);
     });
@@ -3177,5 +3120,5 @@
 </script>
 </body>
 
-<!-- Mirrored from visualgo.net/en/bst by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Feb 2018 15:53:59 GMT -->
+
 </html>

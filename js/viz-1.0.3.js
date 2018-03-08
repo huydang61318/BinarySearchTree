@@ -207,8 +207,7 @@ function play() {
         $('#pause').show();
         $('#play').hide();
         if (isAtEnd())
-            gw.replay();
-        else
+            gw.replay(); else
             gw.play();
     }
 }

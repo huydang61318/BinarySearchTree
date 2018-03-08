@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99b5ff22-d0a8-4f5c-9b59-8144ee91bc94" name="Default" comment="" />
+    <list default="true" id="99b5ff22-d0a8-4f5c-9b59-8144ee91bc94" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bst.html" afterPath="$PROJECT_DIR$/bst.html" />
+      <change beforePath="$PROJECT_DIR$/css/common.css" afterPath="$PROJECT_DIR$/css/common.css" />
+      <change beforePath="$PROJECT_DIR$/css/details.css" afterPath="$PROJECT_DIR$/css/details.css" />
+      <change beforePath="$PROJECT_DIR$/css/drawgraph.css" afterPath="$PROJECT_DIR$/css/drawgraph.css" />
+      <change beforePath="$PROJECT_DIR$/css/grid.css" afterPath="$PROJECT_DIR$/css/grid.css" />
+      <change beforePath="$PROJECT_DIR$/css/header.css" afterPath="$PROJECT_DIR$/css/header.css" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/css/index_new.css" afterPath="$PROJECT_DIR$/css/index_new.css" />
+      <change beforePath="$PROJECT_DIR$/css/navbar.css" afterPath="$PROJECT_DIR$/css/navbar.css" />
+      <change beforePath="$PROJECT_DIR$/css/visual.css" afterPath="$PROJECT_DIR$/css/visual.css" />
+      <change beforePath="$PROJECT_DIR$/css/viz-1.0.1.css" afterPath="$PROJECT_DIR$/css/viz-1.0.1.css" />
+      <change beforePath="$PROJECT_DIR$/css/viz.css" afterPath="$PROJECT_DIR$/css/viz.css" />
+      <change beforePath="$PROJECT_DIR$/js/d3.min.js" afterPath="$PROJECT_DIR$/js/d3.min.js" />
+      <change beforePath="$PROJECT_DIR$/js/graph_library.js" afterPath="$PROJECT_DIR$/js/graph_library.js" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.1.1.min.js" afterPath="$PROJECT_DIR$/js/jquery-3.1.1.min.js" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-ui.min.js" afterPath="$PROJECT_DIR$/js/jquery-ui.min.js" />
+      <change beforePath="$PROJECT_DIR$/js/viz-1.0.3.js" afterPath="$PROJECT_DIR$/js/viz-1.0.3.js" />
+      <change beforePath="$PROJECT_DIR$/list.html" afterPath="$PROJECT_DIR$/list.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,78 +34,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="grid.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualgo.net/css/grid.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bst.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/visualgo.net/bst.html">
+        <entry file="file://$PROJECT_DIR$/bst.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+            <state relative-caret-position="170">
+              <caret line="3124" column="0" lean-forward="false" selection-start-line="3124" selection-start-column="0" selection-end-line="3124" selection-end-column="0" />
               <folding>
-                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#svg#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#1;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#1;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#3;n#div#1;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#11;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualgo.net/list.html">
+        <entry file="file://$PROJECT_DIR$/list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1361">
-              <caret line="718" column="31" lean-forward="true" selection-start-line="718" selection-start-column="31" selection-end-line="718" selection-end-column="31" />
-              <folding>
-                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#32545#32595#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawgraph.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualgo.net/css/drawgraph.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+            <state relative-caret-position="391">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index_new.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualgo.net/css/index_new.css">
+        <entry file="file://$PROJECT_DIR$/css/index_new.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="928">
-              <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="viz.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz.css">
+        <entry file="file://$PROJECT_DIR$/css/viz.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viz-1.0.3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js">
+      <file leaf-file-name="viz-1.0.1.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/viz-1.0.1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2543">
-              <caret line="284" column="1" lean-forward="false" selection-start-line="284" selection-start-column="1" selection-end-line="284" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,6 +159,8 @@
         <option value="$PROJECT_DIR$/visualgo.net/css/viz.css" />
         <option value="$PROJECT_DIR$/visualgo.net/css/navbar.css" />
         <option value="$PROJECT_DIR$/visualgo.net/list.html" />
+        <option value="$PROJECT_DIR$/list.html" />
+        <option value="$PROJECT_DIR$/bst.html" />
       </list>
     </option>
   </component>
@@ -156,7 +170,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="146" />
     <option name="y" value="391" />
     <option name="width" value="1400" />
@@ -201,31 +215,11 @@
             <path>
               <item name="BinarySearchTree" type="b2602c69:ProjectViewProjectNode" />
               <item name="BinarySearchTree" type="462c0819:PsiDirectoryNode" />
-              <item name="visualgo.net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinarySearchTree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinarySearchTree" type="462c0819:PsiDirectoryNode" />
-              <item name="visualgo.net" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BinarySearchTree" type="b2602c69:ProjectViewProjectNode" />
               <item name="BinarySearchTree" type="462c0819:PsiDirectoryNode" />
-              <item name="visualgo.net" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinarySearchTree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinarySearchTree" type="462c0819:PsiDirectoryNode" />
-              <item name="visualgo.net" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-              <item name="silkscreen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BinarySearchTree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BinarySearchTree" type="462c0819:PsiDirectoryNode" />
-              <item name="visualgo.net" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -281,17 +275,19 @@
       <workItem from="1519956717967" duration="5532000" />
       <workItem from="1520156818096" duration="728000" />
       <workItem from="1520176639918" duration="3260000" />
+      <workItem from="1520535271879" duration="520000" />
+      <workItem from="1520535808152" duration="40000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35057000" />
+    <option name="totallyTimeSpent" value="35617000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09322917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -321,397 +317,107 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4233">
-          <caret line="249" column="21" lean-forward="false" selection-start-line="249" selection-start-column="21" selection-end-line="249" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz.css">
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/navbar.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index_new.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/bst.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/list.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/sorting.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/drawgraph.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/grid.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/list.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/sorting.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/drawgraph.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/grid.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/header.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/details.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/sorting.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/bst.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/en/list.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/navbar.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/drawgraph.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/list.html" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/grid.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index_new.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz.css" />
+    <entry file="file://$PROJECT_DIR$/visualgo.net/bst.html" />
+    <entry file="file://$PROJECT_DIR$/css/index_new.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3196">
-          <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css">
+    <entry file="file://$PROJECT_DIR$/css/viz.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index_new.css">
+    <entry file="file://$PROJECT_DIR$/css/viz-1.0.1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bst.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16303">
-          <caret line="959" column="26" lean-forward="false" selection-start-line="959" selection-start-column="26" selection-end-line="959" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/bst.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/sorting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="110" column="13" lean-forward="false" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6902">
-          <caret line="406" column="14" lean-forward="false" selection-start-line="406" selection-start-column="14" selection-end-line="406" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/drawgraph.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4437">
-          <caret line="261" column="24" lean-forward="false" selection-start-line="261" selection-start-column="24" selection-end-line="261" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/sorting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="110" column="13" lean-forward="false" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6902">
-          <caret line="406" column="14" lean-forward="false" selection-start-line="406" selection-start-column="14" selection-end-line="406" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/drawgraph.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4437">
-          <caret line="261" column="24" lean-forward="false" selection-start-line="261" selection-start-column="24" selection-end-line="261" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/graph_library.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="959" column="26" lean-forward="false" selection-start-line="959" selection-start-column="26" selection-end-line="959" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/details.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="110" column="1" lean-forward="false" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz-1.0.1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4233">
-          <caret line="249" column="21" lean-forward="false" selection-start-line="249" selection-start-column="21" selection-end-line="249" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/sorting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/bst.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48603">
-          <caret line="2895" column="28" lean-forward="false" selection-start-line="2895" selection-start-column="28" selection-end-line="2895" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/en/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2562" column="25" lean-forward="false" selection-start-line="2562" selection-start-column="25" selection-end-line="2562" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/visual.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-653">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/drawgraph.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/js/viz-1.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2543">
-          <caret line="284" column="1" lean-forward="false" selection-start-line="284" selection-start-column="1" selection-end-line="284" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1361">
-          <caret line="718" column="31" lean-forward="true" selection-start-line="718" selection-start-column="31" selection-end-line="718" selection-end-column="31" />
+          <caret line="3124" column="0" lean-forward="false" selection-start-line="3124" selection-start-column="0" selection-end-line="3124" selection-end-column="0" />
           <folding>
-            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#32545#32595#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/index_new.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="81" column="21" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/css/viz.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualgo.net/bst.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
-          <folding>
-            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#1;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#2;n#div#1;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#3;n#div#1;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#11;n#div#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
