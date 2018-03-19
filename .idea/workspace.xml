@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99b5ff22-d0a8-4f5c-9b59-8144ee91bc94" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/heap.html" afterPath="$PROJECT_DIR$/heap.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bst.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bst.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bst.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -26,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heap.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="heap.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/heap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+            <state relative-caret-position="595">
+              <caret line="145" column="39" lean-forward="false" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -134,6 +135,7 @@
         <option value="$PROJECT_DIR$/visualgo.net/list.html" />
         <option value="$PROJECT_DIR$/list.html" />
         <option value="$PROJECT_DIR$/bst.html" />
+        <option value="$PROJECT_DIR$/heap.html" />
       </list>
     </option>
   </component>
@@ -251,12 +253,12 @@
       <workItem from="1520535271879" duration="520000" />
       <workItem from="1520535808152" duration="659000" />
       <workItem from="1520749866203" duration="902000" />
-      <workItem from="1521418078050" duration="454000" />
+      <workItem from="1521418078050" duration="1178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37592000" />
+    <option name="totallyTimeSpent" value="38316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -369,18 +371,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bst.html">
+    <entry file="file://$PROJECT_DIR$/heap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="299" column="38" lean-forward="false" selection-start-line="299" selection-start-column="38" selection-end-line="299" selection-end-column="38" />
+        <state relative-caret-position="595">
+          <caret line="145" column="39" lean-forward="false" selection-start-line="145" selection-start-column="39" selection-end-line="145" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/heap.html">
+    <entry file="file://$PROJECT_DIR$/bst.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        <state relative-caret-position="102">
+          <caret line="299" column="38" lean-forward="false" selection-start-line="299" selection-start-column="38" selection-end-line="299" selection-end-column="38" />
           <folding />
         </state>
       </provider>
