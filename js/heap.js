@@ -1523,7 +1523,7 @@ var Heap = function () {
                 $('#code2').html('i = A.length-1');
                 $('#code3').html('while (i > 1 &amp;&amp; A[parent(i)] &lt; A[i])');
                 $('#code4').html('&nbsp&nbspswap(A[i], A[parent(i)])');
-                $('#code5').html('// <b><a href="http://cpbook.net/#downloads" target="_blank">ch2_06_priority_queue.cpp/java</a></b>');
+                $('#code5').html('');
                 $('#code6').html('');
                 $('#code7').html('');
                 break;
@@ -1534,12 +1534,12 @@ var Heap = function () {
                 $('#code4').html('while (i &lt; A.length)');
                 $('#code5').html('&nbsp&nbspif A[i] < (L = the larger of i&#39;s children)');
                 $('#code6').html('&nbsp&nbsp&nbsp&nbspswap(A[i], L)');
-                $('#code7').html('// <b><a href="http://cpbook.net/#downloads" target="_blank">ch2_06_priority_queue.cpp/java</a></b>');
+                $('#code7').html('');
                 break;
             case 2: // HeapSort
                 $('#code1').html('for (i = 0; i &lt; A.length; i++)');
                 $('#code2').html('&nbsp&nbspExtractMax()');
-                $('#code3').html('// <b><a href="http://cpbook.net/#downloads" target="_blank">ch2_06_priority_queue.cpp/java</a></b>');
+                $('#code3').html('');
                 $('#code4').html('');
                 $('#code5').html('');
                 $('#code6').html('');
@@ -1549,7 +1549,7 @@ var Heap = function () {
                 $('#code1').html('Start from an empty Binary Max Heap');
                 $('#code2').html('for (i = 0; i &lt; A.length; i++)');
                 $('#code3').html('&nbsp&nbspInsert(A[i])');
-                $('#code4').html('// <b><a href="http://cpbook.net/#downloads" target="_blank">ch2_06_priority_queue.cpp/java</a></b>');
+                $('#code4').html('');
                 $('#code5').html('');
                 $('#code6').html('');
                 $('#code7').html('');
@@ -1558,7 +1558,7 @@ var Heap = function () {
                 $('#code1').html('The input array A as it is');
                 $('#code2').html('for (i = A.length/2; i &gt;= 1; i--)');
                 $('#code3').html('&nbsp&nbspshiftDown(i)');
-                $('#code4').html('// <b><a href="http://cpbook.net/#downloads" target="_blank">ch2_06_priority_queue.cpp/java</a></b>');
+                $('#code4').html('');
                 $('#code5').html('');
                 $('#code6').html('');
                 $('#code7').html('');
