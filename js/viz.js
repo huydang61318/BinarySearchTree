@@ -55,7 +55,7 @@ function hideStatusPanel() {
     if (isStatusOpen()) {
         $('#status-hide img').removeClass('rotateRight').addClass('rotateLeft');
         $('#current-action').hide();
-        $('#status').animate({width: "--=" + statusCodetraceWidth,});
+        $('#status').animate({width: "-=" + statusCodetraceWidth,});
     }
 }
 
@@ -153,44 +153,155 @@ function initUI() {
     $('#actions-hide').css('padding-bottom', actionsHideBottom);
     $('#current-action').hide();
     $('#actions-hide img').addClass('rotateRight');
-    $('.electure-end').css("background-color", surpriseColour);
-    $('.electure-prev').css("background-color", surpriseColour);
-    $('.electure-next').css("background-color", surpriseColour);
-    $('#hide-popup').css('background-color', surpriseColour);
-    $('#progress-bar .ui-slider-range').css("background-color", surpriseColour);
-    $('#actions').css("background-color", colourTheSecond);
-    $('#actions-hide').css("background-color", colourTheSecond);
     $('.action-menu-pullout').css('left', actionsWidth + 43 + 'px');
     $('.action-menu-pullout').children().css('float', 'left');
-    $('.coloured-menu-option').css("background-color", colourTheSecond).css('color', 'white');
-    $('#codetrace').css("background-color", colourTheThird);
-    $('#codetrace-hide').css("background-color", colourTheThird);
-    if (colourTheThird == '#fec515' || colourTheThird == '#a7d41e') {
-        $('#codetrace').css('color', 'black');
-        var imgUrl = $('#codetrace-hide img').attr('src');
-        if (imgUrl) {
-            $('#codetrace-hide img').attr('src', imgUrl.replace('white', 'black'));
-        }
-        codetraceColor = 'black';
-    }
-    $('#status').css("background-color", colourTheFourth);
-    $('#status-hide').css("background-color", colourTheFourth);
-    if (colourTheFourth == '#fec515' || colourTheFourth == '#a7d41e') {
-        $('#status').css('color', 'black');
-        var imgUrl = $('#status-hide img').attr('src');
-        if (imgUrl) {
-            $('#status-hide img').attr('src', imgUrl.replace('white', 'black'));
-        }
-    }
+
 }
 
+function end_eLecture() {
+    $("#mode-menu a").trigger("click");
+    hideOverlay();
+    closeSlide(cur_slide);
+    mode = 'exploration';
+}
 
+$(function () {
+    // $("#speed-input").slider({
+    //     min: 200, max: 2000, value: 1500, change: function (event, ui) {
+    //         gw.setAnimationDuration(2200 - ui.value);
+    //     }
+    // });
+    // $("#progress-bar").slider({
+    //     range: "min", min: 0, value: 0, slide: function (event, ui) {
+    //         gw.pause();
+    //         gw.jumpToIteration(ui.value, 0);
+    //     }, stop: function (event, ui) {
+    //         if (!isPaused) {
+    //             setTimeout(function () {
+    //                 gw.play();
+    //             }, 500);
+    //         }
+    //     }
+    // });
+    initUI();
+    $('#mode-button').click(function () {
+        $('#other-modes').toggle();
+    });
+    $('#mode-menu').hover(function () {
+        $('#other-modes').show();
+    }, function () {
+        $('#other-modes').hide();
+    });
+    $('#other-modes a').click(function () {
+        var currentMode = $('#mode-button').attr('title');
+        var newMode = $(this).attr('title');
+        var tmp = $('#mode-button').html().substring(0, $('#mode-button').html().length - 2);
+        $('#mode-button').html($(this).html() + ' &#9663;');
+        $(this).html(tmp);
+        $('#mode-button').attr('title', newMode);
+        $(this).attr('title', currentMode);
+        if (newMode == "e-Lecture") {
+            showOverlay();
+            mode = "e-Lecture";
+            if (isPlaying) stop();
+            ENTER_LECTURE_MODE();
+            if (cur_slide == null) cur_slide = ($('#electure-1').length ? '1' : '99');
+            openSlide(cur_slide, function () {
+                runSlide(cur_slide);
+                pushState(cur_slide);
+            });
+        }
+        else if (newMode == "exploration") {
+            makeOverlayTransparent();
+            mode = "exploration";
+            $('.electure-dialog').hide();
+            hideStatusPanel();
+            hideCodetracePanel();
+            showActionsPanel();
+            pushState();
+            ENTER_EXPLORE_MODE();
+        }
+        $('#other-modes').hide();
+    });
+    $('#status-hide').click(function () {
+        if (isStatusOpen())
+            hideStatusPanel(); else
+            showStatusPanel();
+    });
+    $('#codetrace-hide').click(function () {
+        if (isCodetraceOpen())
+            hideCodetracePanel(); else
+            showCodetracePanel();
+    });
+    $('#actions-hide').click(function () {
+        if (isActionsOpen())
+            hideEntireActionsPanel(); else
+            showActionsPanel();
+    });
+    $('.electure-dialog .electure-end').click(end_eLecture);
+    $('.electure-dialog .electure-prev').click(function () {
+        openSlide($(this).attr('data-nextid'));
+    });
+    $('.electure-dialog .electure-next').click(function () {
+        openSlide($(this).attr('data-nextid'));
+    });
+    $(document).keydown(function (event) {
+        if (event.which == 32) {
+            if (mode != "e-Lecture") {
+                if (isPaused)
+                    play(); else
+                    pause();
+            }
+        }
+        else if (event.which == 33) {
+            if (mode == "e-Lecture" && !isPlaying)
+                $('#electure-' + cur_slide + ' .electure-prev').click();
+            event.preventDefault();
+        }
+        else if (event.which == 34) {
+            if (mode == "e-Lecture" && !isPlaying)
+                $('#electure-' + cur_slide + ' .electure-next').click();
+            event.preventDefault();
+        }
+        else if (event.which == 37) {
+            if (mode != "e-Lecture")
+                stepBackward();
+        }
+        else if (event.which == 39) {
+            if (mode != "e-Lecture")
+                stepForward();
+        }
+        else if (event.which == 27) {
+            if ($("#dark-overlay").css('display') == 'none') {
+                stop();
+                if (mode == "e-Lecture") {
+                    $(".menu-highlighted").removeClass("menu-highlighted");
+                    end_eLecture();
+                }
+                else {
+                    $('#other-modes a').click();
+                }
+            }
+        }
+        else if (event.which == 35) {
+            if (mode != "e-Lecture")
+                stop();
+        }
+        else if (event.which == 189) {
+            var d = (2200 - gw.getAnimationDuration()) - 100;
+            $("#speed-input").slider("value", d > 0 ? d : 0);
+        }
+        else if (event.which == 187) {
+            var d = (2200 - gw.getAnimationDuration()) + 100;
+            $("#speed-input").slider("value", d <= 2000 ? d : 2000);
+        }
+    });
+});
 var isPaused = false;
 
 function isAtEnd() {
     return (gw.getCurrentIteration() == (gw.getTotalIteration() - 1));
 }
-
 
 function pause() {
     if (isPlaying) {
@@ -207,7 +318,8 @@ function play() {
         $('#pause').show();
         $('#play').hide();
         if (isAtEnd())
-            gw.replay(); else
+            gw.replay();
+        else
             gw.play();
     }
 }
@@ -252,8 +364,7 @@ function stop() {
     $('#play').hide();
 }
 
-
-
+//Log Write
 $('#status').bind("DOMSubtreeModified",function(){
 
     $('#log').prepend($('#status').html());
@@ -265,10 +376,10 @@ function clearConsole(callback) {
 }
 
 function removeFirstLine(){
-    $('#console').find('p').first().remove();
-    $('#console').find('p').first().remove();
-    $('#console').find('p').first().remove();
-    $('#console').find('p').first().remove();
+    $('#log').find('p').first().remove();
+    $('#log').find('p').first().remove();
+    $('#log').find('p').first().remove();
+    $('#log').find('p').first().remove();
 }
 
 
